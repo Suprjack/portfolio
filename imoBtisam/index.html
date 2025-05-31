@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immo Ibtissam | Immobilier de Prestige Marrakech 🏰</title>
+    
+    <!-- SEO Immobilier Premium -->
+    <meta name="description" content="🏠 Immobilier de luxe Marrakech | Villas, riads, appartements prestige | Location & vente exclusive | Services VIP | Immo Ibtissam - Votre expert immobilier">
+    <meta name="keywords" content="immobilier Marrakech, villa luxe, riad prestige, location villa Marrakech, appartement haut standing, investissement immobilier Maroc">
+    <meta name="author" content="Ibtissam - Expert Immobilier Marrakech">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Immo Ibtissam - Immobilier de Prestige Marrakech">
+    <meta property="og:description" content="🏠 Immobilier de luxe à Marrakech - Villas, riads et appartements d'exception">
+    <meta property="og:image" content="https://ibtissamimmo.ma/og-image.jpg">
+    <meta property="og:url" content="https://ibtissamimmo.ma">
+    <meta property="og:type" content="website">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS Modulaire -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Immo Ibtissam</a>
+            
+            <ul class="nav-links">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#proprietes" class="nav-link">Propriétés</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-links">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#proprietes" class="nav-link">Propriétés</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content loading">
+            <div class="hero-badge">
+                <i class="fas fa-crown"></i>
+                <span>Immobilier de Prestige Marrakech</span>
+            </div>
+            
+            <h1>
+                Votre Refuge de Luxe<br>
+                au Cœur de <span style="color: var(--morocco-gold);">Marrakech</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Découvrez une collection exclusive de villas, riads et résidences d'exception 
+                sélectionnés avec passion par Ibtissam, votre experte en immobilier de prestige.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#proprietes" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    Explorer nos propriétés
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Consultation privée
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Propriétés Exclusives</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Clients Satisfaits</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15ans</span>
+                    <span class="stat-label">D'Expertise</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Taux de Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <div class="search-container loading">
+            <h3>Trouvez Votre Propriété Idéale</h3>
+            <form class="search-form" id="propertySearch">
+                <div class="search-group">
+                    <label class="search-label">Type de bien</label>
+                    <select class="search-input" name="type">
+                        <option value="">Tous types</option>
+                        <option value="villa">Villa</option>
+                        <option value="riad">Riad</option>
+                        <option value="appartement">Appartement</option>
+                        <option value="penthouse">Penthouse</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <label class="search-label">Quartier</label>
+                    <select class="search-input" name="location">
+                        <option value="">Tous quartiers</option>
+                        <option value="medina">Médina</option>
+                        <option value="palmeraie">Palmeraie</option>
+                        <option value="hivernage">Hivernage</option>
+                        <option value="gueliz">Guéliz</option>
+                        <option value="targa">Targa</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <label class="search-label">Budget (MAD)</label>
+                    <select class="search-input" name="budget">
+                        <option value="">Tous budgets</option>
+                        <option value="1000000-2000000">1M - 2M</option>
+                        <option value="2000000-5000000">2M - 5M</option>
+                        <option value="5000000-10000000">5M - 10M</option>
+                        <option value="10000000+">10M+</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Rechercher
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Properties Section -->
+    <section id="proprietes" class="properties">
+        <div class="container">
+            <div class="section-header loading">
+                <h2 class="section-title">Propriétés d'Exception</h2>
+                <p class="section-subtitle">
+                    Découvrez notre sélection exclusive de biens immobiliers de prestige à Marrakech
+                </p>
+            </div>
+            
+            <div class="properties-filter">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="villa">Villas</button>
+                <button class="filter-btn" data-filter="riad">Riads</button>
+                <button class="filter-btn" data-filter="appartement">Appartements</button>
+                <button class="filter-btn" data-filter="penthouse">Penthouses</button>
+            </div>
+            
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Les cartes de propriétés seront générées par JavaScript -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="properties.html" class="btn btn-secondary">
+                    <i class="fas fa-plus"></i>
+                    Voir toutes nos propriétés (150+)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header loading">
+                <h2 class="section-title">Services VIP Exclusifs</h2>
+                <p class="section-subtitle">
+                    Un accompagnement personnalisé pour tous vos projets immobiliers de prestige
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card loading">
+                    <div class="service-icon"><i class="fas fa-search-plus"></i></div>
+                    <h3 class="service-title">Recherche Personnalisée</h3>
+                    <p class="service-description">Nous trouvons LA propriété qui correspond parfaitement à vos critères et vos rêves.</p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="service-title">Négociation Expert</h3>
+                    <p class="service-description">15 ans d'expérience en négociation immobilière de luxe.</p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3 class="service-title">Accompagnement Juridique</h3>
+                    <p class="service-description">Sécurisation complète de votre transaction avec nos partenaires juristes spécialisés.</p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon"><i class="fas fa-key"></i></div>
+                    <h3 class="service-title">Gestion Locative Premium</h3>
+                    <p class="service-description">Service de gestion locative haut de gamme et optimisation des revenus.</p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3 class="service-title">Conciergerie Résidentielle</h3>
+                    <p class="service-description">Services de conciergerie sur-mesure et gestion quotidienne de votre propriété.</p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="service-title">Conseil en Investissement</h3>
+                    <p class="service-description">Analyse de rentabilité et stratégies d'investissement immobilier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image loading">
+                    <div class="about-photo"></div>
+                </div>
+                
+                <div class="about-text loading">
+                    <h2 class="about-name">Ibtissam</h2>
+                    <p class="about-title">Experte en Immobilier de Prestige</p>
+                    <div class="about-description">
+                        <p>Passionnée par l'immobilier de luxe depuis plus de 15 ans, j'ai fait de ma vocation 
+                        mon métier : dénicher les plus belles propriétés de Marrakech.</p>
+                        <p>Native de Marrakech, je connais chaque quartier, chaque ruelle, chaque opportunité. 
+                        Mon réseau exclusif me permet d'accéder à des biens d'exception.</p>
+                        <p><strong>Ma philosophie :</strong> Chaque client est unique, chaque projet est sur-mesure.</p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">300+</span>
+                            <span class="about-stat-label">Transactions Réussies</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">500M+</span>
+                            <span class="about-stat-label">MAD Vendus</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">98%</span>
+                            <span class="about-stat-label">Clients Recommandent</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">15ans</span>
+                            <span class="about-stat-label">D'Expérience</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-calendar-alt"></i>
+                            Rendez-vous privé
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header loading">
+                <h2 class="section-title">Contactez Votre Experte</h2>
+                <p class="section-subtitle">
+                    Discutons de votre projet immobilier autour d'un thé à la menthe traditionnel
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info loading">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Téléphone Direct</h4>
+                            <p>+212 6 XX XX XX XX</p>
+                            <small>Disponible 7j/7 pour vos urgences</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Privé</h4>
+                            <p>ibtissam@immoprestige.ma</p>
+                            <small>Réponse sous 2h garantie</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Bureau Guéliz</h4>
+                            <p>Avenue Mohammed V, Guéliz</p>
+                            <small>Marrakech, Maroc 🇲🇦</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form loading" id="contactForm">
+                    <h3>🏠 Consultation Privée Gratuite</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Nom & Prénom *</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom complet" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="votre@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Décrivez votre projet *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Parlez-moi de vos attentes..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Demander ma consultation privée
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Immo Ibtissam</h4>
+                    <p>Votre experte en immobilier de prestige à Marrakech. 15 ans d'expérience.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Nos Propriétés</h4>
+                    <ul class="footer-links">
+                        <li><a href="#proprietes">Villas de Luxe</a></li>
+                        <li><a href="#proprietes">Riads Authentiques</a></li>
+                        <li><a href="#proprietes">Appartements Prestige</a></li>
+                        <li><a href="#proprietes">Penthouses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services VIP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Recherche Personnalisée</a></li>
+                        <li><a href="#services">Négociation Expert</a></li>
+                        <li><a href="#services">Gestion Locative</a></li>
+                        <li><a href="#services">Conseil Investissement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Expert</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Rendez-vous Privé</a></li>
+                        <li><a href="tel:+212600000000">+212 6XX XXX XXX</a></li>
+                        <li><a href="mailto:ibtissam@immoprestige.ma">Email Direct</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Immo Ibtissam. Tous droits réservés. | Immobilier de Prestige à Marrakech 🏰</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Modulaire -->
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

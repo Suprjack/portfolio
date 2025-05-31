@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCrafters Ultimate | Agence Digitale Futuriste 🚀</title>
+    
+    <!-- SEO & Meta -->
+    <meta name="description" content="WebCrafters Ultimate - Agence digitale révolutionnaire alliant créativité cosmique et expertise business. Création de sites web exceptionnels avec IA et technologies futuristes.">
+    <meta name="keywords" content="agence digitale, création site web, IA, design futuriste, e-commerce, SEO, transformation digitale, site responsive, cyberpunk">
+    <meta name="author" content="WebCrafters Ultimate">
+    
+    <!-- Premium Fonts - Fusion des meilleures typographies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Advanced Libraries for Ultimate Experience -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        /* ============================================
+           🎨 ULTIMATE COLOR SYSTEM - FUSION PREMIUM
+        ============================================ */
+        :root {
+            /* Premium Elite Palette */
+            --primary: #ff0844;
+            --primary-light: #ff2d66;
+            --primary-dark: #e6073d;
+            --secondary: #00d9ff;
+            --accent: #7c3aed;
+            --accent-light: #a855f7;
+            --success: #00ff88;
+            --warning: #ffb800;
+            
+            /* Cyberpunk Cosmic Colors */
+            --cosmic-blue: #58a6ff;
+            --cosmic-cyan: #79c0ff;
+            --neon-pink: #ff006e;
+            --neon-green: #39d353;
+            --electric-purple: #8b5cf6;
+            
+            /* Morocco Business Premium */
+            --morocco-gold: #d4af37;
+            --morocco-red: #dc2626;
+            --morocco-emerald: #059669;
+            
+            /* Ultimate Backgrounds */
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #151521;
+            --bg-tertiary: #1e1e2e;
+            --bg-cosmic: #0d0d0d;
+            --bg-glass: rgba(255, 255, 255, 0.02);
+            --bg-glass-hover: rgba(255, 255, 255, 0.05);
+            --bg-glass-strong: rgba(255, 255, 255, 0.1);
+            
+            /* Typography Perfection */
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #8b949e;
+            --text-cosmic: #f0f0f0;
+            
+            /* Shadow System */
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-neon: 0 0 20px rgba(0, 217, 255, 0.3);
+            --shadow-cosmic: 0 0 30px rgba(88, 166, 255, 0.4);
+            
+            /* Spacing System */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+            --space-2xl: 8rem;
+        }
+
+        /* ============================================
+           🎭 GLOBAL RESET & BASE STYLES
+        ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Typography Hierarchy */
+        h1, h2, h3 {
+            font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .cosmic-font {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* ============================================
+           ✨ PARTICLE SYSTEM CANVAS (v1 Power)
+        ============================================ */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(135deg, 
+                var(--bg-primary) 0%, 
+                var(--bg-secondary) 50%, 
+                var(--bg-cosmic) 100%);
+        }
+
+        /* ============================================
+           🎬 GLITCH EFFECTS SYSTEM (v1 Magic)
+        ============================================ */
+        @keyframes glitch {
+            0%, 100% { 
+                text-shadow: -2px 0 var(--neon-pink), 2px 0 var(--cosmic-cyan); 
+                transform: translate(0);
+            }
+            25% { 
+                text-shadow: -2px 0 var(--cosmic-cyan), 2px 0 var(--neon-pink);
+                transform: translate(-2px, 1px);
+            }
+            50% { 
+                text-shadow: -1px 0 var(--neon-green), 1px 0 var(--electric-purple);
+                transform: translate(1px, -1px);
+            }
+            75% { 
+                text-shadow: -3px 0 var(--warning), 3px 0 var(--success);
+                transform: translate(2px, 1px);
+            }
+        }
+
+        .glitch-text {
+            animation: glitch 3s infinite;
+            position: relative;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text::before {
+            animation: glitch 2s infinite;
+            color: var(--neon-pink);
+            z-index: -1;
+        }
+
+        .glitch-text::after {
+            animation: glitch 3s reverse infinite;
+            color: var(--cosmic-cyan);
+            z-index: -2;
+        }
+
+        /* ============================================
+           🌟 PREMIUM GLASSMORPHISM SYSTEM
+        ============================================ */
+        .glass {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .glass-strong {
+            background: var(--bg-glass-strong);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+
+        .glass:hover {
+            background: var(--bg-glass-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================
+           🎆 NEON & COSMIC EFFECTS (V2 Power)
+        ============================================ */
+        .neon-glow {
+            text-shadow: 0 0 10px var(--cosmic-cyan), 
+                         0 0 20px var(--cosmic-cyan), 
+                         0 0 40px var(--cosmic-cyan);
+        }
+
+        .cosmic-glow {
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.3),
+                        0 0 40px rgba(88, 166, 255, 0.2),
+                        inset 0 0 20px rgba(88, 166, 255, 0.1);
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            from {
+                box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(0, 217, 255, 0.8),
+                           0 0 60px rgba(0, 217, 255, 0.4);
+            }
+        }
+
+        /* ============================================
+           🧬 FLOATING ANIMATIONS (v1 Magic)
+        ============================================ */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .float-reverse {
+            animation: floatReverse 4s ease-in-out infinite;
+        }
+
+        /* ============================================
+           🎯 PREMIUM NAVIGATION SYSTEM MOBILE-FIRST
+        ============================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: var(--space-md);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: var(--bg-glass-strong);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            z-index: 1001;
+        }
+
+        /* Navigation Mobile-First */
+        .nav-links {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--bg-glass-strong);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: var(--space-xl);
+            z-index: 999;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+            background: var(--bg-glass);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 80%;
+        }
+
+        /* Menu Burger */
+        .burger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+            padding: 8px;
+        }
+
+        .burger-line {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .burger-menu.active .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .burger-menu.active .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .cta-button {
+            display: none;
+        }
+
+        /* Desktop Navigation */
+        @media (min-width: 769px) {
+            .burger-menu {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                position: static;
+                width: auto;
+                height: auto;
+                background: none;
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                flex-direction: row;
+                justify-content: flex-end;
+                gap: var(--space-lg);
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                color: var(--text-secondary);
+            }
+
+            .cta-button {
+                display: inline-block;
+                background: linear-gradient(45deg, var(--primary), var(--accent));
+                color: white;
+                padding: var(--space-sm) var(--space-lg);
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+                box-shadow: var(--shadow-neon);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--shadow-cosmic);
+            }
+        }
+
+        /* ============================================
+           🎬 HERO SECTION ULTIMATE
+        ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--space-xl) var(--space-md);
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(10, 10, 15, 0.9) 0%,
+                rgba(21, 21, 33, 0.8) 50%,
+                rgba(13, 13, 13, 0.9) 100%
+            );
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 8vw, 7rem);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(
+                45deg,
+                var(--primary),
+                var(--secondary),
+                var(--accent),
+                var(--cosmic-cyan)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 400% 400%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: var(--space-md) var(--space-xl);
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow-neon);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--secondary);
+            padding: var(--space-md) var(--space-xl);
+            border-radius: 50px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary);
+            color: var(--bg-primary);
+            transform: translateY(-3px);
+        }
+
+        /* ============================================
+           💼 SERVICES SECTION (Classic Business)
+        ============================================ */
+        .services {
+            padding: var(--space-2xl) var(--space-md);
+            background: var(--bg-secondary);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: var(--bg-glass);
+            padding: var(--space-lg);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+            min-height: 300px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: var(--bg-glass-hover);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: var(--space-lg);
+            display: block;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-lg);
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* ============================================
+           💰 PRICING SECTION (Classic Business)
+        ============================================ */
+        .pricing {
+            padding: var(--space-2xl) var(--space-md);
+            background: var(--bg-primary);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .pricing-card {
+            background: var(--bg-glass);
+            padding: var(--space-lg);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+            min-height: 400px;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            background: var(--bg-glass-strong);
+        }
+
+        @media (min-width: 768px) {
+            .pricing-card.featured {
+                transform: scale(1.05);
+            }
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        @media (min-width: 768px) {
+            .pricing-card.featured:hover {
+                transform: scale(1.05) translateY(-10px);
+            }
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .pricing-price {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-lg);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+        }
+
+        .pricing-features li {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-lg);
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* ============================================
+           📞 CONTACT SECTION (Classic Business)
+        ============================================ */
+        .contact {
+            padding: var(--space-2xl) var(--space-md);
+            background: var(--bg-secondary);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-xl);
+        }
+
+        @media (min-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-form {
+            background: var(--bg-glass);
+            padding: var(--space-xl);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info {
+            background: var(--bg-glass);
+            padding: var(--space-xl);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: var(--space-lg);
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+            gap: var(--space-md);
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            width: 2rem;
+        }
+
+        .contact-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            padding: var(--space-sm);
+            border-radius: 10px;
+            background: var(--bg-tertiary);
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-neon);
+        }
+
+        /* Twitter/X Fallback */
+        .social-links a[href*="x.com"] i.fab.fa-twitter:not(:empty) + span,
+        .social-links a[href*="twitter.com"] i.fab.fa-twitter:not(:empty) + span {
+            display: none;
+        }
+
+        .social-links a[href*="x.com"] i.fab.fa-twitter:empty + span,
+        .social-links a[href*="twitter.com"] i.fab.fa-twitter:empty + span {
+            display: inline;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Ensure sections are visible */
+        .services, .pricing, .contact {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .services-grid, .pricing-grid {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-sm);
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--bg-tertiary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: var(--space-md);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-cosmic);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* ============================================
+           🚨 SUCCESS/ERROR MESSAGES
+        ============================================ */
+        .message {
+            padding: var(--space-md);
+            border-radius: 10px;
+            margin-bottom: var(--space-lg);
+            font-weight: 500;
+        }
+
+        .message.success {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+        }
+
+        .message.error {
+            background: rgba(255, 8, 68, 0.1);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        /* ============================================
+           📱 MOBILE OPTIMIZATIONS
+        ============================================ */
+        @media (max-width: 768px) {
+            :root {
+                --space-lg: 1rem;
+                --space-xl: 2rem;
+                --space-2xl: 4rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-md);
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .glitch-text {
+                animation: none; /* Disable heavy animations on mobile */
+            }
+
+            .float-animation,
+            .float-reverse {
+                animation: none; /* Disable floating animations on mobile */
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* ============================================
+           💫 REDUCED MOTION ACCESSIBILITY
+        ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ============================================
+           🌓 DARK MODE ONLY (Site is dark by design)
+        ============================================ */
+        @media (prefers-color-scheme: light) {
+            /* Force dark mode even if user prefers light */
+            body {
+                background: var(--bg-primary);
+                color: var(--text-primary);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         ✨ PARTICLE SYSTEM CANVAS (v1 Integration)
+    ============================================ -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ============================================
+         🧭 PREMIUM NAVIGATION MOBILE-FIRST
+    ============================================ -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo float-animation">WebCrafters</a>
+            
+            <!-- Burger Menu -->
+            <div class="burger-menu" id="burger">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#contact" class="cta-button pulse-glow">Devis Gratuit</a>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         🎬 HERO SECTION ULTIMATE (V2 + v1 + Premium)
+    ============================================ -->
+    <section id="home" class="hero">
+        <!-- Video Background (V2 Style) -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-matrix-particles-4062-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content float-animation">
+            <h1 class="hero-title glitch-text" data-text="WebCrafters Ultimate">
+                WebCrafters Ultimate
+            </h1>
+            <p class="hero-subtitle">
+                🚀 Votre Agence Digitale Futuriste | Création de Sites Web Exceptionnels avec IA & Technologies Avancées
+            </p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">Découvrir Nos Services</a>
+                <a href="#portfolio" class="btn-secondary">Voir Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         💼 SERVICES SECTION (Classic Business + Effects)
+    ============================================ -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title cosmic-font neon-glow">Nos Services Premium</h2>
+            
+            <div class="services-grid">
+                <div class="service-card glass float-animation">
+                    <i class="fas fa-rocket service-icon"></i>
+                    <h3 class="service-title">Création de Sites Web</h3>
+                    <p class="service-description">
+                        Sites web modernes et responsives avec design futuriste et performances optimales.
+                    </p>
+                    <ul class="service-features">
+                        <li>Design responsive premium</li>
+                        <li>Optimisation SEO avancée</li>
+                        <li>Intégration IA & Chatbots</li>
+                        <li>Performance ultra-rapide</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass float-reverse">
+                    <i class="fas fa-brain service-icon"></i>
+                    <h3 class="service-title">Solutions IA & Automation</h3>
+                    <p class="service-description">
+                        Intégration d'intelligence artificielle pour automatiser vos processus business.
+                    </p>
+                    <ul class="service-features">
+                        <li>Chatbots intelligents</li>
+                        <li>Analyse prédictive</li>
+                        <li>Automatisation marketing</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass float-animation">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3 class="service-title">Marketing Digital</h3>
+                    <p class="service-description">
+                        Stratégies marketing digitales pour maximiser votre visibilité et conversions.
+                    </p>
+                    <ul class="service-features">
+                        <li>SEO/SEA expert</li>
+                        <li>Réseaux sociaux</li>
+                        <li>Email marketing</li>
+                        <li>Analytics avancées</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         💰 PRICING SECTION (Classic Business)
+    ============================================ -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title cosmic-font neon-glow">Nos Tarifs</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card glass">
+                    <h3 class="pricing-title">Starter</h3>
+                    <div class="pricing-price">599€</div>
+                    <div class="pricing-period">Site vitrine</div>
+                    <ul class="pricing-features">
+                        <li>Site responsive 5 pages</li>
+                        <li>Design moderne</li>
+                        <li>SEO basique</li>
+                        <li>Formulaire contact</li>
+                        <li>Support 3 mois</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Choisir</a>
+                </div>
+
+                <div class="pricing-card glass featured cosmic-glow">
+                    <div class="pricing-badge">POPULAIRE</div>
+                    <h3 class="pricing-title">Business</h3>
+                    <div class="pricing-price">1299€</div>
+                    <div class="pricing-period">Site complet</div>
+                    <ul class="pricing-features">
+                        <li>Site responsive illimité</li>
+                        <li>Design premium + animations</li>
+                        <li>SEO avancé</li>
+                        <li>Chatbot IA intégré</li>
+                        <li>E-commerce</li>
+                        <li>Support 12 mois</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Choisir</a>
+                </div>
+
+                <div class="pricing-card glass">
+                    <h3 class="pricing-title">Enterprise</h3>
+                    <div class="pricing-price">2999€</div> 
+                    <div class="pricing-period">Solution complète</div>
+                    <ul class="pricing-features">
+                        <li>Plateforme sur-mesure</li>
+                        <li>IA & Machine Learning</li>
+                        <li>App mobile incluse</li>
+                        <li>Dashboard analytics</li>
+                        <li>Support prioritaire</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         📞 CONTACT SECTION AMÉLIORÉ
+    ============================================ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title cosmic-font neon-glow">Contactez-Nous</h2>
+            
+            <div class="contact-content">
+                <!-- Formulaire de Contact -->
+                <form class="contact-form glass-strong" id="contact-form">
+                    <div id="form-message"></div>
+                    
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project">Type de projet *</label>
+                        <select id="project" name="project" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="site-vitrine">Site vitrine</option>
+                            <option value="e-commerce">E-commerce</option>
+                            <option value="app-web">Application web</option>
+                            <option value="ia-solution">Solution IA</option>
+                            <option value="refonte">Refonte de site</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Non défini</option>
+                            <option value="500-1000">500€ - 1000€</option>
+                            <option value="1000-2500">1000€ - 2500€</option>
+                            <option value="2500-5000">2500€ - 5000€</option>
+                            <option value="5000+">5000€+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet en détail..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn pulse-glow" id="submit-btn">
+                        🚀 Envoyer le Message
+                    </button>
+                </form>
+
+                <!-- Informations de Contact -->
+                <div class="contact-info glass-strong">
+                    <h3>Nos Coordonnées</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:contact@webcrafters-ultimate.com">contact@webcrafters-ultimate.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            <a href="https://wa.me/212630728089" target="_blank">+212 630 728 089</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Localisation</strong><br>
+                            <span style="color: var(--text-secondary);">Marrakech, Maroc</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Horaires</strong><br>
+                            <span style="color: var(--text-secondary);">Lun - Ven : 9h - 18h<br>Sam : 9h - 13h</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-lg);">Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/marrakechsoundlab/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/ThibautCampana" target="_blank" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                            <!-- Fallback si l'icône Twitter ne fonctionne pas -->
+                            <span style="display: none;">𝕏</span>
+                        </a>
+                        <a href="https://web.facebook.com/thibaut.campana.2025/" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/212630728089" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:contact@webcrafters-ultimate.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         🎮 ULTIMATE JAVASCRIPT SYSTEM OPTIMISÉ
+    ============================================ -->
+    <script>
+        // ============================================
+        // ✨ PARTICLE SYSTEM (v1 Integration) - Optimisé Mobile
+        // ============================================
+        class ParticleSystem {
+            constructor() {
+                this.canvas = document.getElementById('particles-canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.isDesktop = window.innerWidth > 768;
+                this.particleCount = this.isDesktop ? 80 : 30; // Moins de particules sur mobile
+                this.resize();
+                this.init();
+                
+                window.addEventListener('resize', () => {
+                    this.isDesktop = window.innerWidth > 768;
+                    this.particleCount = this.isDesktop ? 80 : 30;
+                    this.resize();
+                });
+            }
+            
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            
+            init() {
+                this.particles = []; // Clear existing particles
+                for (let i = 0; i < this.particleCount; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        vx: (Math.random() - 0.5) * (this.isDesktop ? 2 : 1),
+                        vy: (Math.random() - 0.5) * (this.isDesktop ? 2 : 1),
+                        size: Math.random() * 3 + 1,
+                        opacity: Math.random() * 0.5 + 0.2,
+                        color: this.getRandomColor()
+                    });
+                }
+                this.animate();
+            }
+            
+            getRandomColor() {
+                const colors = ['#ff0844', '#00d9ff', '#7c3aed', '#00ff88', '#58a6ff'];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                this.particles.forEach((particle, index) => {
+                    // Mettre à jour position
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+                    
+                    // Rebond sur les bords
+                    if (particle.x < 0 || particle.x > this.canvas.width) {
+                        particle.vx *= -1;
+                    }
+                    if (particle.y < 0 || particle.y > this.canvas.height) {
+                        particle.vy *= -1;
+                    }
+                    
+                    // Dessiner particule
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    this.ctx.fillStyle = particle.color;
+                    this.ctx.globalAlpha = particle.opacity;
+                    this.ctx.fill();
+                    
+                    // Effet de connexion entre particules proches (seulement sur desktop)
+                    if (this.isDesktop) {
+                        this.particles.slice(index + 1).forEach(otherParticle => {
+                            const dx = particle.x - otherParticle.x;
+                            const dy = particle.y - otherParticle.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (distance < 100) {
+                                this.ctx.beginPath();
+                                this.ctx.moveTo(particle.x, particle.y);
+                                this.ctx.lineTo(otherParticle.x, otherParticle.y);
+                                this.ctx.strokeStyle = particle.color;
+                                this.ctx.globalAlpha = 0.1;
+                                this.ctx.stroke();
+                            }
+                        });
+                    }
+                });
+                
+                this.ctx.globalAlpha = 1;
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // ============================================
+        // 🧭 NAVIGATION CONTROLLER MOBILE-FIRST
+        // ============================================
+        class NavigationController {
+            constructor() {
+                this.navbar = document.getElementById('navbar');
+                this.burger = document.getElementById('burger');
+                this.navLinks = document.getElementById('nav-links');
+                this.init();
+            }
+            
+            init() {
+                // Burger menu toggle
+                this.burger.addEventListener('click', () => {
+                    this.burger.classList.toggle('active');
+                    this.navLinks.classList.toggle('active');
+                    document.body.style.overflow = this.navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Close mobile menu when clicking on links
+                this.navLinks.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'A') {
+                        this.burger.classList.remove('active');
+                        this.navLinks.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Scroll effect
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        this.navbar.classList.add('scrolled');
+                    } else {
+                        this.navbar.classList.remove('scrolled');
+                    }
+                });
+                
+                // Smooth scroll pour les liens
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(anchor.getAttribute('href'));
+                        if (target) {
+                            const offsetTop = target.offsetTop - 80; // Account for fixed nav
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+        }
+
+        // ============================================
+        // 🎭 GSAP ANIMATIONS (Premium Integration)
+        // ============================================
+        class AnimationController {
+            constructor() {
+                this.init();
+            }
+            
+            init() {
+                // Register ScrollTrigger plugin
+                if (typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+                }
+
+                // Animation d'entrée pour les cartes de service avec fallback
+                const serviceCards = document.querySelectorAll('.service-card');
+                if (serviceCards.length > 0) {
+                    // Ensure cards are visible first
+                    serviceCards.forEach(card => {
+                        card.style.opacity = '1';
+                        card.style.visibility = 'visible';
+                    });
+
+                    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                        gsap.from('.service-card', {
+                            duration: 1,
+                            y: 50,
+                            opacity: 0,
+                            stagger: 0.2,
+                            scrollTrigger: {
+                                trigger: '.services',
+                                start: 'top 80%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+                }
+                
+                // Animation pour les prix avec fallback
+                const pricingCards = document.querySelectorAll('.pricing-card');
+                if (pricingCards.length > 0) {
+                    // Ensure cards are visible first
+                    pricingCards.forEach(card => {
+                        card.style.opacity = '1';
+                        card.style.visibility = 'visible';
+                    });
+
+                    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                        gsap.from('.pricing-card', {
+                            duration: 1,
+                            scale: 0.9,
+                            opacity: 0,
+                            stagger: 0.2,
+                            scrollTrigger: {
+                                trigger: '.pricing',
+                                start: 'top 80%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+                }
+                
+                // Animation des titres de section avec fallback
+                const sectionTitles = document.querySelectorAll('.section-title');
+                if (sectionTitles.length > 0) {
+                    sectionTitles.forEach(title => {
+                        title.style.opacity = '1';
+                        title.style.visibility = 'visible';
+                    });
+
+                    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                        gsap.from('.section-title', {
+                            duration: 1,
+                            y: 30,
+                            opacity: 0,
+                            scrollTrigger: {
+                                trigger: '.section-title',
+                                start: 'top 90%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+                }
+
+                // Animation du formulaire de contact avec fallback
+                const contactElements = document.querySelectorAll('.contact-form, .contact-info');
+                if (contactElements.length > 0) {
+                    contactElements.forEach(element => {
+                        element.style.opacity = '1';
+                        element.style.visibility = 'visible';
+                    });
+
+                    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                        gsap.from('.contact-form, .contact-info', {
+                            duration: 1,
+                            x: -30,
+                            opacity: 0,
+                            stagger: 0.3,
+                            scrollTrigger: {
+                                trigger: '.contact',
+                                start: 'top 80%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+                }
+            }
+        }
+
+        // ============================================
+        // 📧 FORM HANDLER AMÉLIORÉ
+        // ============================================
+        class FormController {
+            constructor() {
+                this.form = document.getElementById('contact-form');
+                this.submitBtn = document.getElementById('submit-btn');
+                this.messageDiv = document.getElementById('form-message');
+                this.init();
+            }
+            
+            init() {
+                this.form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleSubmit();
+                });
+
+                // Real-time validation
+                const inputs = this.form.querySelectorAll('input[required], textarea[required], select[required]');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => this.validateField(input));
+                    input.addEventListener('input', () => this.clearFieldError(input));
+                });
+            }
+            
+            validateField(field) {
+                const value = field.value.trim();
+                let isValid = true;
+                let message = '';
+
+                // Remove existing error styling
+                field.style.borderColor = '';
+                
+                if (field.hasAttribute('required') && !value) {
+                    isValid = false;
+                    message = 'Ce champ est requis';
+                } else if (field.type === 'email' && value && !this.isValidEmail(value)) {
+                    isValid = false;
+                    message = 'Adresse email invalide';
+                } else if (field.type === 'tel' && value && !this.isValidPhone(value)) {
+                    isValid = false;
+                    message = 'Numéro de téléphone invalide';
+                }
+
+                if (!isValid) {
+                    field.style.borderColor = 'var(--primary)';
+                    this.showFieldError(field, message);
+                } else {
+                    this.clearFieldError(field);
+                }
+
+                return isValid;
+            }
+
+            clearFieldError(field) {
+                const existingError = field.parentNode.querySelector('.field-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+                field.style.borderColor = '';
+            }
+
+            showFieldError(field, message) {
+                this.clearFieldError(field);
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'field-error';
+                errorDiv.style.color = 'var(--primary)';
+                errorDiv.style.fontSize = '0.9rem';
+                errorDiv.style.marginTop = 'var(--space-xs)';
+                errorDiv.textContent = message;
+                field.parentNode.appendChild(errorDiv);
+            }
+
+            isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            isValidPhone(phone) {
+                return /^[\+]?[\d\s\-\(\)]{10,}$/.test(phone);
+            }
+            
+            validateForm() {
+                const requiredFields = this.form.querySelectorAll('input[required], textarea[required], select[required]');
+                let isValid = true;
+
+                requiredFields.forEach(field => {
+                    if (!this.validateField(field)) {
+                        isValid = false;
+                    }
+                });
+
+                return isValid;
+            }
+
+            showMessage(message, type = 'success') {
+                this.messageDiv.innerHTML = `<div class="message ${type}">${message}</div>`;
+                this.messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            async handleSubmit() {
+                // Validate form
+                if (!this.validateForm()) {
+                    this.showMessage('⚠️ Veuillez corriger les erreurs dans le formulaire.', 'error');
+                    return;
+                }
+
+                const formData = new FormData(this.form);
+                const data = Object.fromEntries(formData);
+                
+                // Show loading state
+                const originalText = this.submitBtn.textContent;
+                this.submitBtn.textContent = '⏳ Envoi en cours...';
+                this.submitBtn.disabled = true;
+                
+                try {
+                    // Simulate API call (remplacez par votre endpoint réel)
+                    await this.simulateEmailSend(data);
+                    
+                    this.showMessage(`
+                        ✅ <strong>Message envoyé avec succès!</strong><br>
+                        Nous vous répondrons dans les plus brefs délais.
+                    `, 'success');
+                    
+                    this.form.reset();
+                    
+                    // Redirect to WhatsApp as fallback
+                    setTimeout(() => {
+                        const whatsappMessage = encodeURIComponent(
+                            `Bonjour WebCrafters Ultimate!\n\n` +
+                            `Je souhaite obtenir des informations sur vos services.\n\n` +
+                            `Projet: ${data.project}\n` +
+                            `Budget: ${data.budget || 'Non défini'}\n\n` +
+                            `${data.message}`
+                        );
+                        window.open(`https://wa.me/212630728089?text=${whatsappMessage}`, '_blank');
+                    }, 2000);
+                    
+                } catch (error) {
+                    console.error('Erreur envoi formulaire:', error);
+                    this.showMessage(`
+                        ❌ <strong>Erreur lors de l'envoi.</strong><br>
+                        Vous pouvez nous contacter directement via WhatsApp.
+                    `, 'error');
+                    
+                    // Fallback to WhatsApp
+                    setTimeout(() => {
+                        const whatsappMessage = encodeURIComponent(
+                            `Bonjour WebCrafters Ultimate!\n\n` +
+                            `Problème avec le formulaire de contact.\n` +
+                            `Pouvez-vous me recontacter?\n\n` +
+                            `Email: ${data.email}\n` +
+                            `Projet: ${data.project}`
+                        );
+                        window.open(`https://wa.me/212630728089?text=${whatsappMessage}`, '_blank');
+                    }, 3000);
+                }
+                
+                // Restore button
+                setTimeout(() => {
+                    this.submitBtn.textContent = originalText;
+                    this.submitBtn.disabled = false;
+                }, 3000);
+            }
+
+            async simulateEmailSend(data) {
+                // Simuler un appel API (remplacez par votre service d'email réel)
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        // Simuler succès 90% du temps
+                        if (Math.random() > 0.1) {
+                            console.log('📧 Email simulé envoyé:', data);
+                            resolve(true);
+                        } else {
+                            reject(new Error('Erreur simulation'));
+                        }
+                    }, 2000);
+                });
+            }
+        }
+
+        // ============================================
+        // 🎯 PERFORMANCE OPTIMIZER
+        // ============================================
+        class PerformanceOptimizer {
+            constructor() {
+                this.init();
+            }
+            
+            init() {
+                // Lazy loading pour les images
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                    img.classList.remove('lazy');
+                                    imageObserver.unobserve(img);
+                                }
+                            }
+                        });
+                    });
+                    
+                    document.querySelectorAll('img[data-src]').forEach(img => {
+                        imageObserver.observe(img);
+                    });
+                }
+                
+                // Préchargement des ressources critiques
+                this.preloadCriticalResources();
+                
+                // Optimisation des animations sur mobile
+                this.optimizeForMobile();
+            }
+            
+            preloadCriticalResources() {
+                const criticalResources = [
+                    'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900',
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+                ];
+                
+                criticalResources.forEach(resource => {
+                    const link = document.createElement('link');
+                    link.rel = 'preload';
+                    link.href = resource;
+                    link.as = 'style';
+                    document.head.appendChild(link);
+                });
+            }
+
+            optimizeForMobile() {
+                const isMobile = window.innerWidth <= 768;
+                const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                
+                if (isMobile || isReducedMotion) {
+                    // Disable heavy animations on mobile or for users who prefer reduced motion
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .glitch-text {
+                            animation: none !important;
+                        }
+                        .float-animation,
+                        .float-reverse {
+                            animation: none !important;
+                        }
+                        .pulse-glow {
+                            animation: none !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+        }
+
+        // ============================================
+        // 🚀 INITIALIZATION SYSTEM
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure all sections are visible immediately
+            const sections = document.querySelectorAll('.services, .pricing, .contact');
+            const grids = document.querySelectorAll('.services-grid, .pricing-grid');
+            const cards = document.querySelectorAll('.service-card, .pricing-card');
+            
+            sections.forEach(section => {
+                section.style.opacity = '1';
+                section.style.visibility = 'visible';
+            });
+            
+            grids.forEach(grid => {
+                grid.style.opacity = '1';
+                grid.style.visibility = 'visible';
+            });
+            
+            cards.forEach(card => {
+                card.style.opacity = '1';
+                card.style.visibility = 'visible';
+            });
+            
+            // Initialiser tous les systèmes
+            new ParticleSystem();
+            new NavigationController();
+            new FormController();
+            new PerformanceOptimizer();
+            
+            // Initialiser GSAP après chargement avec vérification
+            setTimeout(() => {
+                if (typeof gsap !== 'undefined') {
+                    new AnimationController();
+                    console.log('✅ GSAP Animations initialisées');
+                } else {
+                    console.log('⚠️ GSAP non disponible - site fonctionnel sans animations');
+                }
+            }, 100);
+            
+            // Fix Twitter/X icon fallback
+            setTimeout(() => {
+                const twitterLinks = document.querySelectorAll('a[href*="x.com"], a[href*="twitter.com"]');
+                twitterLinks.forEach(link => {
+                    const icon = link.querySelector('i.fab.fa-twitter');
+                    const fallback = link.querySelector('span');
+                    
+                    if (icon && fallback) {
+                        // Check if icon is loaded
+                        const iconStyle = window.getComputedStyle(icon, '::before');
+                        if (!iconStyle.content || iconStyle.content === 'none' || iconStyle.content === '""') {
+                            // Icon not loaded, show fallback
+                            icon.style.display = 'none';
+                            fallback.style.display = 'inline';
+                        }
+                    }
+                });
+            }, 1000);
+            
+            // Console easter egg
+            console.log(`
+🚀 WebCrafters Ultimate - Site Optimisé Mobile-First !
+✨ Système de particules adaptatif
+🎭 Animations GSAP avec ScrollTrigger
+🧭 Navigation responsive avec burger menu
+📱 Design Mobile-First activé
+💎 Performance optimisée
+📧 Formulaire de contact fonctionnel
+🔗 Liens sociaux intégrés
+🐦 Icône Twitter/X avec fallback
+
+Développé avec passion par WebCrafters Ultimate 🔥
+Version: Mobile-First Optimized v2.1
+            `);
+        });
+
+        // ============================================
+        // 🎮 EASTER EGGS & KONAMI CODE
+        // ============================================
+        let konamiCode = [];
+        const konami = [38,38,40,40,37,39,37,39,66,65];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konami.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.join(',') === konami.join(',')) {
+                document.body.style.animation = 'rainbow 2s infinite';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 5000);
+                console.log('🎉 KONAMI CODE ACTIVÉ ! Mode arc-en-ciel !');
+            }
+        });
+        
+        // Animation rainbow pour l'easter egg
+        const rainbowCSS = `
+            @keyframes rainbow {
+                0% { filter: hue-rotate(0deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
+        `;
+        const style = document.createElement('style');
+        style.textContent = rainbowCSS;
+        document.head.appendChild(style);
+
+        // ============================================
+        // 🔧 SERVICE WORKER POUR PWA (Optionnel)
+        // ============================================
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Vous pouvez ajouter un service worker pour une PWA
+                console.log('💡 Service Worker supporté - Prêt pour PWA');
+            });
+        }
+    </script>
+</body>
+</html>

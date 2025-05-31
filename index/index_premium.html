@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Elite | Développeur Full-Stack & Entrepreneur Digital 🚀</title>
+    
+    <!-- SEO & Meta -->
+    <meta name="description" content="Portfolio professionnel - Développeur Full-Stack spécialisé en IA, créateur d'agences digitales et expert en solutions web innovantes">
+    <meta name="keywords" content="développeur full-stack, IA, intelligence artificielle, agence digitale, SEO, Marrakech, portfolio">
+    <meta name="author" content="Elite Developer">
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Three.js for 3D Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <style>
+        :root {
+            /* Elite Color Palette */
+            --primary: #ff0844;
+            --primary-light: #ff2d66;
+            --primary-dark: #e6073d;
+            --secondary: #00d9ff;
+            --accent: #7c3aed;
+            --accent-light: #a855f7;
+            --success: #00ff88;
+            --warning: #ffb800;
+            
+            /* Morocco Inspired Premium */
+            --morocco-gold: #d4af37;
+            --morocco-red: #dc2626;
+            --morocco-emerald: #059669;
+            
+            /* Professional Backgrounds */
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #151521;
+            --bg-tertiary: #1e1e2e;
+            --bg-glass: rgba(255, 255, 255, 0.02);
+            --bg-glass-hover: rgba(255, 255, 255, 0.05);
+            
+            /* Typography Hierarchy */
+            --text-primary: #ffffff;
+            --text-secondary: #e4e4e7;
+            --text-muted: #a1a1aa;
+            --text-dim: #71717a;
+            
+            /* Premium Effects */
+            --border-primary: rgba(255, 8, 68, 0.2);
+            --border-secondary: rgba(0, 217, 255, 0.15);
+            --border-muted: rgba(255, 255, 255, 0.08);
+            
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 40px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.5);
+            --shadow-colored: 0 20px 60px rgba(255, 8, 68, 0.3);
+            --shadow-glow: 0 0 40px rgba(255, 8, 68, 0.4);
+            
+            --gradient-primary: linear-gradient(135deg, #ff0844 0%, #00d9ff 50%, #7c3aed 100%);
+            --gradient-morocco: linear-gradient(135deg, #dc2626 0%, #d4af37 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        }
+
+        /* Advanced Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Advanced Background Animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 8, 68, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 217, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+            z-index: -1;
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Premium Typography */
+        .font-primary { font-family: 'Space Grotesk', sans-serif; }
+        .font-secondary { font-family: 'Poppins', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .text-display { 
+            font-size: clamp(3rem, 8vw, 7rem); 
+            line-height: 0.9; 
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-hero { 
+            font-size: clamp(2rem, 6vw, 4rem); 
+            line-height: 1.1; 
+        }
+
+        .text-title { 
+            font-size: clamp(1.8rem, 4vw, 3rem); 
+        }
+
+        .text-subtitle { 
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem); 
+        }
+
+        /* Advanced Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 15, 0.8);
+            border-bottom: 1px solid var(--border-muted);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.95);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section - Premium */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-colored);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--border-primary);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gradient-primary);
+            border-color: transparent;
+        }
+
+        /* Code Terminal - Ultra Premium */
+        .terminal {
+            background: var(--bg-tertiary);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-muted);
+        }
+
+        .terminal-header {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-content {
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .code-comment { color: #6b7280; }
+        .code-keyword { color: #8b5cf6; }
+        .code-string { color: #10b981; }
+        .code-function { color: #3b82f6; }
+        .code-variable { color: #f59e0b; }
+
+        /* Projects Grid - Elite Level */
+        .projects {
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .projects-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-muted);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            background: var(--bg-glass-hover);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-primary);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: rgba(255, 8, 68, 0.1);
+            color: var(--primary-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 8, 68, 0.2);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary-light);
+        }
+
+        /* Skills Section - Professional */
+        .skills {
+            padding: 8rem 2rem;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-muted);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .avatar {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: white;
+            margin: 0 auto;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-light);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-tertiary);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo font-mono">{'<DevElite/>'}</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="text-display animate-fade-in-up">
+                    Elite<br>
+                    <span style="background: var(--gradient-morocco); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Developer</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.2s;">
+                    Développeur Full-Stack & Entrepreneur Digital spécialisé en Intelligence Artificielle. 
+                    Créateur d'expériences numériques exceptionnelles et de solutions innovantes.
+                </p>
+                <div class="cta-buttons animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <a href="#projects" class="btn-primary">Voir mes réalisations</a>
+                    <a href="#contact" class="btn-secondary">Collaborons ensemble</a>
+                </div>
+                
+                <div class="stats" style="display: flex; gap: 2rem; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary-light);">15+</div>
+                        <div style="color: var(--text-muted); font-size: 0.9rem;">Projets Réalisés</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--secondary);">5+</div>
+                        <div style="color: var(--text-muted); font-size: 0.9rem;">Technologies Maîtrisées</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--success);">100%</div>
+                        <div style="color: var(--text-muted); font-size: 0.9rem;">Satisfaction Client</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terminal animate-fade-in-up" style="animation-delay: 0.6s;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                    <span style="margin-left: 1rem; color: var(--text-muted); font-size: 0.9rem;">elite_portfolio.js</span>
+                </div>
+                <div class="terminal-content">
+                    <div><span class="code-comment">// Développeur Elite - Marrakech, Morocco 🇲🇦</span></div>
+                    <div><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">name</span>: <span class="code-string">'Elite Developer'</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">location</span>: <span class="code-string">'Marrakech, Morocco'</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">specialties</span>: [</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'AI & Machine Learning'</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Full-Stack Development'</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Digital Agency'</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'SEO & Marketing'</span></div>
+                    <div>&nbsp;&nbsp;],</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">passion</span>: <span class="code-string">'Transformer les idées en réalités digitales'</span></div>
+                    <div>};</div>
+                    <br>
+                    <div><span class="code-keyword">function</span> <span class="code-function">createMagic</span>(<span class="code-variable">idea</span>) {</div>
+                    <div>&nbsp;&nbsp;<span class="code-keyword">return</span> developer.<span class="code-function">build</span>(<span class="code-variable">idea</span>) + <span class="code-string">' ✨'</span>;</div>
+                    <div>}</div>
+                    <br>
+                    <div><span class="code-comment">// Prêt pour votre prochain projet révolutionnaire!</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects-container">
+            <div class="section-title">
+                <h2>Mes Réalisations Elite</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Découvrez mes projets les plus aboutis, des plateformes IA aux agences digitales complètes
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- IA News Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">IA Insights Hub</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Plateforme d'actualités IA</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Plateforme d'actualités et insights sur l'Intelligence Artificielle avec versions française et anglaise. 
+                        Interface moderne, contenu dynamique et expérience utilisateur optimisée pour les professionnels de l'IA.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5/CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">AI Content</span>
+                        <span class="tag">Multilingue</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le projet</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>Code source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SEO Marrakech -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: var(--gradient-morocco);">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">SEO Marrakech Pro</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Agence SEO Professionnelle</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Service complet d'optimisation SEO pour entreprises marocaines. Architecture technique avancée 
+                        avec Node.js, TypeScript et Tailwind CSS. Système de suivi des performances et dashboard client.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">SEO</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le projet</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>Code source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WebCrafters Agency -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">WebCrafters Maroc</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Agence Digitale Premium</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Agence digitale complète spécialisée dans la création de sites web professionnels, e-commerce, 
+                        et stratégies marketing digital. Design premium et expérience utilisateur exceptionnelle.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">E-commerce</span>
+                        <span class="tag">Marketing Digital</span>
+                        <span class="tag">UX/UI</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le projet</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>Code source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formation IA Marrakech -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">Formation IA Marrakech</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Plateforme d'apprentissage IA</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Plateforme de formation complète en Intelligence Artificielle. Built avec Next.js et TypeScript, 
+                        offrant des cours interactifs, exercices pratiques et certification professionnelle.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">E-learning</span>
+                        <span class="tag">AI Education</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le projet</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>Code source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Golf Thailand Experience -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <i class="fas fa-golf-ball"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">Golf Thailand Elite</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Expérience Golf Premium</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Site vitrine premium pour expériences golf exclusives en Thaïlande. Design immersif avec 
+                        galeries photos haute qualité, système de réservation et témoignages clients.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Travel & Tourism</span>
+                        <span class="tag">Premium Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le projet</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>Code source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IA Solutions Marketplace -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">IA Solutions Market</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Marketplace IA Premium</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Marketplace spécialisé dans la vente de solutions d'Intelligence Artificielle. 
+                        Interface moderne, système de paiement sécurisé et catalogue de produits IA personnalisés.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">E-commerce</span>
+                        <span class="tag">AI Products</span>
+                        <span class="tag">Payment Systems</span>
+                        <span class="tag">Marketplace</span>
+                        <span class="tag">SaaS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le projet</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>Code source</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <div class="section-title">
+                <h2>Expertise Technique Elite</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Maîtrise complète des technologies modernes et émergentes
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Frontend Excellence</h3>
+                    <div class="skill-list">
+                        <span class="tag">React</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">HTML5/CSS3</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Backend Mastery</h3>
+                    <div class="skill-list">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">IA & Machine Learning</h3>
+                    <div class="skill-list">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Digital Marketing</h3>
+                    <div class="skill-list">
+                        <span class="tag">SEO/SEA</span>
+                        <span class="tag">Google Analytics</span>
+                        <span class="tag">Social Media</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">Email Marketing</span>
+                        <span class="tag">Conversion</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">DevOps & Cloud</h3>
+                    <div class="skill-list">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Vercel</span>
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Netlify</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Design & UX</h3>
+                    <div class="skill-list">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Adobe Creative</span>
+                        <span class="tag">UX Research</span>
+                        <span class="tag">Wireframing</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">UI Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="avatar">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <h3>Développeur Elite & Entrepreneur Digital</h3>
+                <div class="about-text">
+                    <p style="margin-bottom: 1.5rem;">
+                        Basé à <strong>Marrakech, Maroc</strong> 🇲🇦, je suis un développeur full-stack passionné 
+                        par l'innovation technologique et l'entrepreneuriat digital. Avec une expertise approfondie 
+                        en Intelligence Artificielle et une vision stratégique du business numérique.
+                    </p>
+                    
+                    <p style="margin-bottom: 1.5rem;">
+                        Mon parcours m'a mené à créer des solutions web complexes, des plateformes IA avancées, 
+                        et des agences digitales prospères. Je transforme les idées en produits numériques 
+                        exceptionnels qui génèrent des résultats concrets.
+                    </p>
+                    
+                    <p style="margin-bottom: 2rem;">
+                        <strong>Ma mission :</strong> Démocratiser l'accès aux technologies avancées et aider 
+                        les entreprises à prospérer dans l'ère numérique grâce à des solutions sur-mesure et innovantes.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem;">
+                    <div style="text-align: center; padding: 1rem; background: var(--bg-glass); border-radius: 10px;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-light);">7+</div>
+                        <div style="color: var(--text-muted); font-size: 0.9rem;">Années d'expérience</div>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: var(--bg-glass); border-radius: 10px;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--secondary);">50+</div>
+                        <div style="color: var(--text-muted); font-size: 0.9rem;">Clients satisfaits</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                    <span style="background: rgba(220, 38, 38, 0.1); color: var(--morocco-red); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">🇲🇦 Marrakech Native</span>
+                    <span style="background: rgba(212, 175, 55, 0.1); color: var(--morocco-gold); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">🤖 AI Specialist</span>
+                    <span style="background: rgba(5, 150, 105, 0.1); color: var(--morocco-emerald); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">🚀 Entrepreneur</span>
+                </div>
+                
+                <a href="#contact" class="btn-primary" style="display: inline-block;">
+                    Travaillons ensemble
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-title">
+                <h2>Créons Ensemble Votre Projet</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Prêt à transformer votre vision en réalité digitale ? Discutons de votre prochain projet révolutionnaire.
+                </p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:contact@elitedev.ma" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@elitedev.ma</span>
+                </a>
+                
+                <a href="https://wa.me/212600000000" class="contact-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp Business</span>
+                </a>
+                
+                <a href="https://linkedin.com/in/elitedev" class="contact-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
+                
+                <a href="https://github.com/elitedev" class="contact-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub Projects</span>
+                </a>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-glass); border-radius: 20px; border: 1px solid var(--border-muted);">
+                <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Disponibilité & Services</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div>
+                        <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">✅ Projets Web Complets</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Sites vitrines, e-commerce, applications web</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">🤖 Solutions IA Sur-Mesure</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Chatbots, analyse de données, automation</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">📈 Stratégie Digitale</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">SEO, marketing digital, croissance</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-light); margin-bottom: 0.5rem;">🚀 Consulting Tech</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Architecture, optimisation, formation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <div class="logo font-mono" style="margin-bottom: 0.5rem;">{'<DevElite/>'}</div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Crafted with ❤️ in Marrakech, Morocco 🇲🇦</p>
+            </div>
+            
+            <div style="display: flex; gap: 1rem;">
+                <a href="https://github.com" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-muted)'">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-muted)'">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-muted)'">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-muted);">
+            <p style="color: var(--text-dim); font-size: 0.8rem;">
+                © 2024 Elite Developer. Tous droits réservés. | Développeur Full-Stack & Expert IA basé à Marrakech
+            </p>
+        </div>
+    </footer>
+    <!-- Advanced JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Advanced animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all project cards and skill categories
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.project-card, .skill-category');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Terminal typing effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const codeLines = [
+                "console.log('Initializing Elite Portfolio...');",
+                "const skills = await loadAllSkills();",
+                "const projects = await fetchRealProjects();",
+                "console.log('Ready for collaboration! 🚀');",
+                "// Contact me for your next project!"
+            ];
+
+            let currentLine = 0;
+            let currentChar = 0;
+            const terminalOutput = document.createElement('div');
+            terminalOutput.style.color = 'var(--success)';
+            terminalOutput.style.marginTop = '1rem';
+            
+            const terminalContent = document.querySelector('.terminal-content');
+            if (terminalContent) {
+                terminalContent.appendChild(terminalOutput);
+                
+                function typeCode() {
+                    if (currentLine < codeLines.length) {
+                        if (currentChar < codeLines[currentLine].length) {
+                            terminalOutput.innerHTML += codeLines[currentLine].charAt(currentChar);
+                            currentChar++;
+                            setTimeout(typeCode, 50);
+                        } else {
+                            terminalOutput.innerHTML += '<br>';
+                            currentLine++;
+                            currentChar = 0;
+                            setTimeout(typeCode, 1000);
+                        }
+                    }
+                }
+                
+                setTimeout(typeCode, 2000);
+            }
+        });
+
+        // Dynamic background particles
+        function createParticles() {
+            const particleContainer = document.createElement('div');
+            particleContainer.style.position = 'fixed';
+            particleContainer.style.top = '0';
+            particleContainer.style.left = '0';
+            particleContainer.style.width = '100%';
+            particleContainer.style.height = '100%';
+            particleContainer.style.pointerEvents = 'none';
+            particleContainer.style.zIndex = '-1';
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '2px';
+                particle.style.height = '2px';
+                particle.style.background = 'var(--primary-light)';
+                particle.style.borderRadius = '50%';
+                particle.style.opacity = '0.3';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animation = `float ${3 + Math.random() * 4}s linear infinite`;
+                
+                particleContainer.appendChild(particle);
+            }
+            
+            document.body.appendChild(particleContainer);
+        }
+
+        // Float animation for particles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+                10% { opacity: 0.3; }
+                90% { opacity: 0.3; }
+                100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+            }
+            
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.1); opacity: 1; }
+            }
+            
+            .project-card:hover .project-icon {
+                animation: pulse 2s infinite;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize particles
+        document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Advanced hover effects for project cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                    this.style.boxShadow = '0 30px 80px rgba(255, 8, 68, 0.3)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = 'var(--shadow-md)';
+                });
+            });
+        });
+
+        // Professional loading screen
+        window.addEventListener('load', () => {
+            const loader = document.createElement('div');
+            loader.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-primary); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div style="font-size: 2rem; margin-bottom: 2rem; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">{'<DevElite/>'}</div>
+                    <div style="width: 60px; height: 60px; border: 3px solid rgba(255, 8, 68, 0.3); border-top: 3px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                    <div style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Chargement du portfolio...</div>
+                </div>
+            `;
+            
+            document.body.appendChild(loader);
+            
+            const spinStyle = document.createElement('style');
+            spinStyle.textContent = `
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(spinStyle);
+            
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    document.body.removeChild(loader);
+                }, 500);
+            }, 1500);
+        });
+
+        // Easter egg - Konami code
+        let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    // Easter egg activated
+                    document.body.style.animation = 'rainbow 2s infinite';
+                    const easterEggStyle = document.createElement('style');
+                    easterEggStyle.textContent = `
+                        @keyframes rainbow {
+                            0% { filter: hue-rotate(0deg); }
+                            100% { filter: hue-rotate(360deg); }
+                        }
+                    `;
+                    document.head.appendChild(easterEggStyle);
+                    
+                    alert('🎉 Easter Egg Activated! Vous avez débloqué le mode arc-en-ciel!');
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+
+        // Professional console message
+        console.log('%c🚀 Elite Developer Portfolio', 'color: #ff0844; font-size: 24px; font-weight: bold;');
+        console.log('%c💼 Développeur Full-Stack & Expert IA basé à Marrakech', 'color: #00d9ff; font-size: 16px;');
+        console.log('%c📧 Contact: contact@elitedev.ma', 'color: #7c3aed; font-size: 14px;');
+        console.log('%c🔥 Intéressé par une collaboration? Envoyez-moi un message!', 'color: #00ff88; font-size: 14px;');
+    </script>
+</body>
+</html>

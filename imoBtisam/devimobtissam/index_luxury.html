@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immo Ibtissam | Immobilier de Prestige Marrakech 🏰</title>
+    
+    <!-- SEO Immobilier Premium -->
+    <meta name="description" content="🏠 Immobilier de luxe Marrakech | Villas, riads, appartements prestige | Location & vente exclusive | Services VIP | Immo Ibtissam - Votre expert immobilier">
+    <meta name="keywords" content="immobilier Marrakech, villa luxe, riad prestige, location villa Marrakech, appartement haut standing, investissement immobilier Maroc">
+    <meta name="author" content="Ibtissam - Expert Immobilier Marrakech">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Immo Ibtissam - Immobilier de Prestige Marrakech">
+    <meta property="og:description" content="🏠 Immobilier de luxe à Marrakech - Villas, riads et appartements d'exception">
+    <meta property="og:image" content="https://ibtissamimmo.ma/og-image.jpg">
+    <meta property="og:url" content="https://ibtissamimmo.ma">
+    <meta property="og:type" content="website">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Luxury Real Estate Colors */
+            --primary: #b8860b;
+            --primary-light: #daa520;
+            --primary-dark: #9a7209;
+            --secondary: #2c3e50;
+            --accent: #8b4513;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --error: #e74c3c;
+            
+            /* Morocco Luxury Palette */
+            --morocco-gold: #d4af37;
+            --morocco-bronze: #cd7f32;
+            --morocco-burgundy: #800020;
+            --morocco-cream: #f5f5dc;
+            
+            /* Premium Backgrounds */
+            --bg-primary: #ffffff;
+            --bg-secondary: #fafafa;
+            --bg-tertiary: #f8f9fa;
+            --bg-dark: #1a1a1a;
+            --bg-darker: #0d1117;
+            --bg-gradient: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #cd7f32 100%);
+            --bg-luxury: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+            
+            /* Typography Luxury */
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #666666;
+            --text-light: #999999;
+            --text-white: #ffffff;
+            
+            /* Luxury Effects */
+            --border-radius: 12px;
+            --border-color: #e8e8e8;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+            --shadow-luxury: 0 8px 32px rgba(184, 134, 11, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+        }
+
+        /* Luxury Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .text-luxury {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+        }
+
+        /* Container System */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .container-lg {
+            max-width: 1400px;
+        }
+
+        /* Navigation Luxury */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mobile-menu.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            padding: 1rem;
+        }
+
+        .mobile-nav-links li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav-links li:last-child {
+            border-bottom: none;
+        }
+
+        /* Hero Section Luxury */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23b8860b" width="1000" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(184, 134, 11, 0.3) 0%, rgba(212, 175, 55, 0.2) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--bg-gradient);
+            color: white;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Search Bar Luxury */
+        .search-section {
+            margin-top: -4rem;
+            position: relative;
+            z-index: 3;
+            padding: 0 2rem;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .search-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .search-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .search-input {
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+        }
+
+        .search-btn {
+            background: var(--bg-gradient);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Properties Section */
+        .properties {
+            padding: 8rem 0;
+            background: var(--bg-secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .properties-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            border-radius: 25px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .property-image {
+            height: 250px;
+            background: var(--bg-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--success);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .property-favorite {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .property-favorite:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .property-content {
+            padding: 2rem;
+        }
+
+        .property-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .property-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .property-location {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .property-features {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .property-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .property-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--bg-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 0;
+            background: var(--bg-luxury);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-photo {
+            width: 300px;
+            height: 350px;
+            border-radius: var(--border-radius);
+            background: var(--bg-gradient);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-title {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .about-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-stat-label {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 0;
+            background: var(--bg-secondary);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-gradient);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: var(--text-muted);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        select.form-control {
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--text-white);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .search-form {
+                grid-template-columns: repeat(3, 1fr) auto;
+                align-items: end;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .loading {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .loading.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Immo Ibtissam</a>
+            
+            <ul class="nav-links">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#proprietes" class="nav-link">Propriétés</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-links">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#proprietes" class="nav-link">Propriétés</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content loading">
+            <div class="hero-badge">
+                <i class="fas fa-crown"></i>
+                <span>Immobilier de Prestige Marrakech</span>
+            </div>
+            
+            <h1>
+                Votre Refuge de Luxe<br>
+                au Cœur de <span style="color: var(--morocco-gold);">Marrakech</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Découvrez une collection exclusive de villas, riads et résidences d'exception 
+                sélectionnés avec passion par Ibtissam, votre experte en immobilier de prestige.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#proprietes" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    Explorer nos propriétés
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Consultation privée
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Propriétés Exclusives</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Clients Satisfaits</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15ans</span>
+                    <span class="stat-label">D'Expertise</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Taux de Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <div class="search-container loading">
+            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-primary); font-family: 'Playfair Display', serif;">
+                Trouvez Votre Propriété Idéale
+            </h3>
+            <form class="search-form" id="propertySearch">
+                <div class="search-group">
+                    <label class="search-label">Type de bien</label>
+                    <select class="search-input" name="type">
+                        <option value="">Tous types</option>
+                        <option value="villa">Villa</option>
+                        <option value="riad">Riad</option>
+                        <option value="appartement">Appartement</option>
+                        <option value="penthouse">Penthouse</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <label class="search-label">Quartier</label>
+                    <select class="search-input" name="location">
+                        <option value="">Tous quartiers</option>
+                        <option value="medina">Médina</option>
+                        <option value="palmeraie">Palmeraie</option>
+                        <option value="hivernage">Hivernage</option>
+                        <option value="gueliz">Guéliz</option>
+                        <option value="targa">Targa</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <label class="search-label">Budget (MAD)</label>
+                    <select class="search-input" name="budget">
+                        <option value="">Tous budgets</option>
+                        <option value="1000000-2000000">1M - 2M</option>
+                        <option value="2000000-5000000">2M - 5M</option>
+                        <option value="5000000-10000000">5M - 10M</option>
+                        <option value="10000000+">10M+</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Rechercher
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Properties Section -->
+    <section id="proprietes" class="properties">
+        <div class="container">
+            <div class="section-header loading">
+                <h2 class="section-title">Propriétés d'Exception</h2>
+                <p class="section-subtitle">
+                    Découvrez notre sélection exclusive de biens immobiliers de prestige à Marrakech
+                </p>
+            </div>
+            
+            <div class="properties-filter">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="villa">Villas</button>
+                <button class="filter-btn" data-filter="riad">Riads</button>
+                <button class="filter-btn" data-filter="appartement">Appartements</button>
+                <button class="filter-btn" data-filter="penthouse">Penthouses</button>
+            </div>
+            
+            <div class="properties-grid">
+                <!-- Villa de Luxe Palmeraie -->
+                <div class="property-card loading" data-category="villa">
+                    <div class="property-image" style="background: linear-gradient(45deg, #b8860b, #d4af37); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-home"></i>
+                        <span class="property-badge">Exclusivité</span>
+                        <button class="property-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">8,500,000 MAD</div>
+                        <h3 class="property-title">Villa Contemporaine Palmeraie</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Palmeraie, Marrakech</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>6 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>8 SDB</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>650m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-swimming-pool"></i>
+                                <span>Piscine</span>
+                            </div>
+                        </div>
+                        <p class="property-description">
+                            Villa d'architecte exceptionnelle avec vue panoramique sur l'Atlas. 
+                            Design contemporain, matériaux nobles, spa privé et jardin paysager de 2000m².
+                        </p>
+                        <div class="property-actions">
+                            <a href="#" class="btn btn-primary">Visiter</a>
+                            <a href="#contact" class="btn btn-outline">Plus d'infos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Riad Authentique Médina -->
+                <div class="property-card loading" data-category="riad">
+                    <div class="property-image" style="background: linear-gradient(45deg, #8b4513, #cd7f32); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-archway"></i>
+                        <span class="property-badge">Coup de Cœur</span>
+                        <button class="property-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">4,200,000 MAD</div>
+                        <h3 class="property-title">Riad Authentique Médina</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Médina, Marrakech</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>5 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>6 SDB</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>420m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-fountain"></i>
+                                <span>Fontaine</span>
+                            </div>
+                        </div>
+                        <p class="property-description">
+                            Riad majestueux du 18ème siècle entièrement restauré. Architecture traditionnelle, 
+                            patio central avec fontaine, terrasse panoramique sur les toits de la Médina.
+                        </p>
+                        <div class="property-actions">
+                            <a href="#" class="btn btn-primary">Visiter</a>
+                            <a href="#contact" class="btn btn-outline">Plus d'infos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Penthouse Hivernage -->
+                <div class="property-card loading" data-category="penthouse">
+                    <div class="property-image" style="background: linear-gradient(45deg, #2c3e50, #34495e); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-building"></i>
+                        <span class="property-badge">Neuf</span>
+                        <button class="property-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">6,800,000 MAD</div>
+                        <h3 class="property-title">Penthouse Luxury Hivernage</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hivernage, Marrakech</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>4 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>5 SDB</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>380m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-hot-tub"></i>
+                                <span>Jacuzzi</span>
+                            </div>
+                        </div>
+                        <p class="property-description">
+                            Penthouse ultra-moderne avec terrasse de 200m². Vue imprenable sur l'Atlas, 
+                            finitions luxueuses, domotique complète et services de conciergerie.
+                        </p>
+                        <div class="property-actions">
+                            <a href="#" class="btn btn-primary">Visiter</a>
+                            <a href="#contact" class="btn btn-outline">Plus d'infos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Villa Moderne Targa -->
+                <div class="property-card loading" data-category="villa">
+                    <div class="property-image" style="background: linear-gradient(45deg, #27ae60, #2ecc71); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-leaf"></i>
+                        <span class="property-badge">Écologique</span>
+                        <button class="property-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">5,900,000 MAD</div>
+                        <h3 class="property-title">Villa Écologique Targa</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Targa, Marrakech</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>5 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>6 SDB</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>520m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-solar-panel"></i>
+                                <span>Solaire</span>
+                            </div>
+                        </div>
+                        <p class="property-description">
+                            Villa écologique d'exception avec panneaux solaires, récupération d'eau de pluie. 
+                            Design bioclimatique, matériaux durables et jardin méditerranéen de 1500m².
+                        </p>
+                        <div class="property-actions">
+                            <a href="#" class="btn btn-primary">Visiter</a>
+                            <a href="#contact" class="btn btn-outline">Plus d'infos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Appartement Guéliz -->
+                <div class="property-card loading" data-category="appartement">
+                    <div class="property-image" style="background: linear-gradient(45deg, #e74c3c, #c0392b); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-city"></i>
+                        <span class="property-badge">Centre-ville</span>
+                        <button class="property-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">2,850,000 MAD</div>
+                        <h3 class="property-title">Appartement de Prestige Guéliz</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Guéliz, Marrakech</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>3 SDB</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>180m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-parking"></i>
+                                <span>2 parkings</span>
+                            </div>
+                        </div>
+                        <p class="property-description">
+                            Appartement haut standing au cœur de Guéliz. Résidence sécurisée avec piscine, 
+                            finitions premium, terrasse panoramique et proximité de tous commerces.
+                        </p>
+                        <div class="property-actions">
+                            <a href="#" class="btn btn-primary">Visiter</a>
+                            <a href="#contact" class="btn btn-outline">Plus d'infos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Riad Investissement -->
+                <div class="property-card loading" data-category="riad">
+                    <div class="property-image" style="background: linear-gradient(45deg, #f39c12, #e67e22); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-coins"></i>
+                        <span class="property-badge">Investissement</span>
+                        <button class="property-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">3,200,000 MAD</div>
+                        <h3 class="property-title">Riad Boutique - Investissement</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Médina, Marrakech</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>6 suites</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <span>12 personnes</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-chart-line"></i>
+                                <span>ROI 12%</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-concierge-bell"></i>
+                                <span>Géré</span>
+                            </div>
+                        </div>
+                        <p class="property-description">
+                            Riad boutique clé en main avec licence d'exploitation. Rentabilité garantie 12%, 
+                            gestion complète assurée, clientèle internationale fidélisée.
+                        </p>
+                        <div class="property-actions">
+                            <a href="#" class="btn btn-primary">Étudier</a>
+                            <a href="#contact" class="btn btn-outline">ROI détaillé</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="properties.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1.25rem 2rem;">
+                    <i class="fas fa-plus"></i>
+                    Voir toutes nos propriétés (150+)
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header loading">
+                <h2 class="section-title">Services VIP Exclusifs</h2>
+                <p class="section-subtitle">
+                    Un accompagnement personnalisé pour tous vos projets immobiliers de prestige
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3 class="service-title">Recherche Personnalisée</h3>
+                    <p class="service-description">
+                        Nous trouvons LA propriété qui correspond parfaitement à vos critères et vos rêves. 
+                        Accès exclusif à des biens hors marché et négociation experte.
+                    </p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="service-title">Négociation Expert</h3>
+                    <p class="service-description">
+                        15 ans d'expérience en négociation immobilière de luxe. Nous obtenons les meilleures 
+                        conditions d'achat et optimisons votre investissement.
+                    </p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="service-title">Accompagnement Juridique</h3>
+                    <p class="service-description">
+                        Sécurisation complète de votre transaction avec nos partenaires juristes spécialisés 
+                        en droit immobilier marocain et international.
+                    </p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="service-title">Gestion Locative Premium</h3>
+                    <p class="service-description">
+                        Service de gestion locative haut de gamme : sélection rigoureuse des locataires, 
+                        entretien, maintenance et optimisation des revenus.
+                    </p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="service-title">Conciergerie Résidentielle</h3>
+                    <p class="service-description">
+                        Services de conciergerie sur-mesure : entretien, jardinage, sécurité, 
+                        réceptions privées et gestion quotidienne de votre propriété.
+                    </p>
+                </div>
+                
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Conseil en Investissement</h3>
+                    <p class="service-description">
+                        Analyse de rentabilité, stratégies d'investissement immobilier, optimisation fiscale 
+                        et suivi de la performance de votre portefeuille.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image loading">
+                    <div class="about-photo" style="display: flex; align-items: center; justify-content: center; color: white; font-size: 6rem;">
+                        <i class="fas fa-user-crown"></i>
+                    </div>
+                </div>
+                
+                <div class="about-text loading">
+                    <h2 class="about-name">Ibtissam</h2>
+                    <p class="about-title">Experte en Immobilier de Prestige</p>
+                    <div class="about-description">
+                        <p>
+                            Passionnée par l'immobilier de luxe depuis plus de 15 ans, j'ai fait de ma vocation 
+                            mon métier : dénicher les plus belles propriétés de Marrakech et accompagner 
+                            mes clients vers leur acquisition idéale.
+                        </p>
+                        <p>
+                            Native de Marrakech, je connais chaque quartier, chaque ruelle, chaque opportunité. 
+                            Mon réseau exclusif et ma connaissance approfondie du marché me permettent d'accéder 
+                            à des biens d'exception souvent hors marché.
+                        </p>
+                        <p>
+                            <strong>Ma philosophie :</strong> Chaque client est unique, chaque projet est sur-mesure. 
+                            Je m'engage personnellement dans chaque transaction pour garantir votre entière satisfaction.
+                        </p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">300+</span>
+                            <span class="about-stat-label">Transactions Réussies</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">500M+</span>
+                            <span class="about-stat-label">MAD Vendus</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">98%</span>
+                            <span class="about-stat-label">Clients Recommandent</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">15ans</span>
+                            <span class="about-stat-label">D'Expérience</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-calendar-alt"></i>
+                            Rendez-vous privé
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header loading">
+                <h2 class="section-title">Contactez Votre Experte</h2>
+                <p class="section-subtitle">
+                    Discutons de votre projet immobilier autour d'un thé à la menthe traditionnel
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info loading">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Téléphone Direct</h4>
+                            <p>+212 6 XX XX XX XX</p>
+                            <small>Disponible 7j/7 pour vos urgences</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Privé</h4>
+                            <p>ibtissam@immoprestige.ma</p>
+                            <small>Réponse sous 2h garantie</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Bureau Guéliz</h4>
+                            <p>Avenue Mohammed V, Guéliz</p>
+                            <small>Marrakech, Maroc 🇲🇦</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp VIP</h4>
+                            <p>Consultation immédiate</p>
+                            <small>Photos et vidéos en temps réel</small>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: var(--bg-gradient); border-radius: var(--border-radius); text-align: center; color: white;">
+                        <h4 style="color: white; margin-bottom: 1rem;">🏆 Garanties Exclusives</h4>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.9rem;">
+                            <div>✅ Confidentialité absolue</div>
+                            <div>✅ Visite privée 24/7</div>
+                            <div>✅ Négociation garantie</div>
+                            <div>✅ Service après-vente à vie</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form loading" id="contactForm">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary); text-align: center; font-family: 'Playfair Display', serif;">
+                        🏠 Consultation Privée Gratuite
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Nom & Prénom *</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom complet" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="votre@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="+212 6XX XXX XXX" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project">Type de projet *</label>
+                        <select id="project" name="project" class="form-control" required>
+                            <option value="">Sélectionnez votre projet</option>
+                            <option value="achat-residence">Achat résidence principale</option>
+                            <option value="achat-secondaire">Achat résidence secondaire</option>
+                            <option value="investissement">Investissement locatif</option>
+                            <option value="vente">Vente de propriété</option>
+                            <option value="gestion">Gestion locative</option>
+                            <option value="conseil">Conseil en investissement</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Budget approximatif</label>
+                        <select id="budget" name="budget" class="form-control">
+                            <option value="">Sélectionnez votre budget</option>
+                            <option value="1M-3M">1M - 3M MAD</option>
+                            <option value="3M-5M">3M - 5M MAD</option>
+                            <option value="5M-10M">5M - 10M MAD</option>
+                            <option value="10M-20M">10M - 20M MAD</option>
+                            <option value="20M+">20M+ MAD</option>
+                            <option value="confidentiel">Budget confidentiel</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zone">Zone préférée</label>
+                        <select id="zone" name="zone" class="form-control">
+                            <option value="">Toutes zones</option>
+                            <option value="medina">Médina</option>
+                            <option value="palmeraie">Palmeraie</option>
+                            <option value="hivernage">Hivernage</option>
+                            <option value="gueliz">Guéliz</option>
+                            <option value="targa">Targa</option>
+                            <option value="agdal">Agdal</option>
+                            <option value="autre">Autre zone</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Décrivez votre projet *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Parlez-moi de vos attentes, vos critères, votre timeline..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem;">
+                            <input type="checkbox" required style="margin-top: 0.2rem;">
+                            <span>J'accepte d'être contacté par Ibtissam pour discuter de mon projet immobilier. Mes données personnelles seront traitées de manière confidentielle.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1.25rem;">
+                        <i class="fas fa-paper-plane"></i>
+                        Demander ma consultation privée
+                    </button>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-muted);">
+                        🔒 Confidentialité garantie | ⚡ Réponse sous 2h | 🎯 Consultation 100% gratuite
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Immo Ibtissam</h4>
+                    <p style="margin-bottom: 1rem; color: var(--text-light);">
+                        Votre experte en immobilier de prestige à Marrakech. 15 ans d'expérience 
+                        au service de votre projet immobilier d'exception.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://web.facebook.com/groups/268998315609035" style="color: var(--text-light); font-size: 1.5rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-light)'">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/agence_marrakech_realty/" style="color: var(--text-light); font-size: 1.5rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-light)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/the-luxury-real-estate" style="color: var(--text-light); font-size: 1.5rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-light)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TheLuxuryHomeShow" style="color: var(--text-light); font-size: 1.5rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-light)'">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Nos Propriétés</h4>
+                    <ul class="footer-links">
+                        <li><a href="#proprietes">Villas de Luxe</a></li>
+                        <li><a href="#proprietes">Riads Authentiques</a></li>
+                        <li><a href="#proprietes">Appartements Prestige</a></li>
+                        <li><a href="#proprietes">Penthouses</a></li>
+                        <li><a href="#proprietes">Investissements</a></li>
+                        <li><a href="#proprietes">Propriétés Exclusives</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services VIP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Recherche Personnalisée</a></li>
+                        <li><a href="#services">Négociation Expert</a></li>
+                        <li><a href="#services">Accompagnement Juridique</a></li>
+                        <li><a href="#services">Gestion Locative</a></li>
+                        <li><a href="#services">Conciergerie</a></li>
+                        <li><a href="#services">Conseil Investissement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Expert</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Rendez-vous Privé</a></li>
+                        <li><a href="tel:+212600000000">+212 6XX XXX XXX</a></li>
+                        <li><a href="mailto:ibtissam@immoprestige.ma">Email Direct</a></li>
+                        <li><a href="#">WhatsApp VIP</a></li>
+                        <li><a href="bureau.html">Bureau Guéliz</a></li>
+                        <li><a href="#contact">Consultation Gratuite</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Immo Ibtissam. Tous droits réservés. | Immobilier de Prestige à Marrakech 🏰</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                    Expert immobilier agréé | Membre FNAIM Maroc | Spécialiste luxe depuis 2009 🇲🇦
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Premium Real Estate -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Property filtering
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const propertyCards = document.querySelectorAll('.property-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Filter properties
+                    propertyCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeInUp 0.5s ease-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Property favorites
+        document.addEventListener('DOMContentLoaded', () => {
+            const favoritesBtns = document.querySelectorAll('.property-favorite');
+
+            favoritesBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const icon = this.querySelector('i');
+                    const propertyTitle = this.closest('.property-card').querySelector('.property-title').textContent;
+                    
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.style.background = 'var(--primary)';
+                        this.style.color = 'white';
+                        showNotification(`${propertyTitle} ajouté aux favoris ❤️`, 'success');
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.style.background = 'rgba(255, 255, 255, 0.9)';
+                        this.style.color = 'var(--text-primary)';
+                        showNotification(`${propertyTitle} retiré des favoris`, 'info');
+                    }
+                });
+            });
+        });
+
+        // Property search form
+        document.getElementById('propertySearch').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const searchCriteria = {
+                type: formData.get('type'),
+                location: formData.get('location'),
+                budget: formData.get('budget')
+            };
+            
+            // Simulate search
+            showNotification('Recherche en cours...', 'info');
+            
+            setTimeout(() => {
+                let message = 'Recherche terminée ! ';
+                if (searchCriteria.type) message += `Type: ${searchCriteria.type} `;
+                if (searchCriteria.location) message += `Zone: ${searchCriteria.location} `;
+                if (searchCriteria.budget) message += `Budget: ${searchCriteria.budget}`;
+                
+                showNotification(message + ' - 12 propriétés trouvées', 'success');
+                
+                // Scroll to properties
+                document.getElementById('proprietes').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+
+        // Advanced contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const project = formData.get('project');
+            const message = formData.get('message');
+            
+            // Enhanced validation
+            if (!name || !email || !phone || !project || !message) {
+                showNotification('Veuillez remplir tous les champs obligatoires.', 'error');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Veuillez entrer une adresse email valide.', 'error');
+                return;
+            }
+            
+            // Phone validation (Moroccan format)
+            const phoneRegex = /^(\+212|0)[5-7][0-9]{8}$/;
+            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+                showNotification('Veuillez entrer un numéro de téléphone marocain valide.', 'error');
+                return;
+            }
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show luxury loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            // Simulate luxury form processing
+            setTimeout(() => {
+                const personalizedMessage = `
+                    <div style="background: var(--bg-gradient); color: white; padding: 2rem; border-radius: var(--border-radius); margin-bottom: 1.5rem; text-align: center;">
+                        <i class="fas fa-crown" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; margin-bottom: 1rem;">Merci ${name} ! 🏰</h4>
+                        <p style="margin-bottom: 1rem;">Votre demande de consultation VIP a été reçue avec le plus grand soin.</p>
+                        <div style="background: rgba(255, 255, 255, 0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; backdrop-filter: blur(20px);">
+                            <strong>Prochaines étapes VIP :</strong><br>
+                            ✨ Analyse personnalisée de votre profil (2h)<br>
+                            📞 Appel privé d'Ibtissam (24h maximum)<br>
+                            🏠 Sélection exclusive de propriétés<br>
+                            🗓️ Rendez-vous privé dans notre salon VIP
+                        </div>
+                        <p style="font-size: 0.95rem; opacity: 0.95;">
+                            Ibtissam étudiera personnellement votre projet ${project.replace('-', ' ')} 
+                            et vous contactera sous 24h pour une consultation privée.
+                        </p>
+                    </div>
+                `;
+                
+                this.insertAdjacentHTML('afterbegin', personalizedMessage);
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Auto-scroll to success message
+                this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Track luxury conversion
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'luxury_consultation_request', {
+                        event_category: 'Real Estate Lead',
+                        event_label: project,
+                        value: 1
+                    });
+                }
+                
+                // Remove success message after 10 seconds
+                setTimeout(() => {
+                    const successMsg = this.querySelector('[style*="background: var(--bg-gradient)"]');
+                    if (successMsg) {
+                        successMsg.style.opacity = '0';
+                        successMsg.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => successMsg.remove(), 500);
+                    }
+                }, 10000);
+                
+            }, 3000);
+        });
+
+        // Luxury notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            const colors = {
+                success: 'var(--success)',
+                error: 'var(--error)',
+                info: 'var(--primary)',
+                warning: 'var(--warning)'
+            };
+            
+            const icons = {
+                success: 'check-circle',
+                error: 'exclamation-triangle',
+                info: 'info-circle',
+                warning: 'exclamation-circle'
+            };
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${colors[type]};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow-xl);
+                z-index: 10000;
+                max-width: 400px;
+                animation: slideInRight 0.3s ease-out;
+                font-weight: 500;
+            `;
+            notification.innerHTML = `<i class="fas fa-${icons[type]}"></i> ${message}`;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+
+        // Stats animation for luxury counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number, .about-stat-number');
+            
+            counters.forEach(counter => {
+                const target = counter.innerText;
+                const isPrice = target.includes('M');
+                const isPercentage = target.includes('%');
+                const isYears = target.includes('ans');
+                
+                let numericTarget;
+                if (isPrice) {
+                    numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+                } else if (isPercentage) {
+                    numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+                } else if (isYears) {
+                    numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+                } else {
+                    numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+                }
+                
+                if (numericTarget && numericTarget > 0) {
+                    let current = 0;
+                    const increment = Math.ceil(numericTarget / 40);
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= numericTarget) {
+                            counter.innerText = target;
+                            clearInterval(timer);
+                        } else {
+                            if (isPrice) {
+                                counter.innerText = Math.floor(current) + 'M+';
+                            } else if (isPercentage) {
+                                counter.innerText = Math.floor(current) + '%';
+                            } else if (isYears) {
+                                counter.innerText = Math.floor(current) + 'ans';
+                            } else {
+                                counter.innerText = Math.floor(current) + '+';
+                            }
+                        }
+                    }, 60);
+                }
+            });
+        }
+
+        // Property cards luxury interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            const propertyCards = document.querySelectorAll('.property-card');
+            
+            propertyCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-12px) scale(1.02)';
+                    this.style.boxShadow = 'var(--shadow-luxury)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-8px) scale(1)';
+                    this.style.boxShadow = 'var(--shadow-xl)';
+                });
+            });
+        });
+
+        // Service cards luxury effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    const icon = this.querySelector('.service-icon');
+                    if (icon) {
+                        icon.style.animation = 'pulse 1.5s infinite';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-8px) scale(1)';
+                    const icon = this.querySelector('.service-icon');
+                    if (icon) {
+                        icon.style.animation = 'none';
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer for luxury animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Stats observer for luxury counters
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.loading, .animate-on-scroll');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            const statsSection = document.querySelector('.hero-stats');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+            
+            const aboutStats = document.querySelector('.about-stats');
+            if (aboutStats) {
+                statsObserver.observe(aboutStats);
+            }
+        });
+
+        // WhatsApp VIP integration
+        function openWhatsAppVIP() {
+            const phone = "+212600000000"; // Replace with Ibtissam's WhatsApp
+            const message = "Bonjour Ibtissam ! Je souhaite une consultation VIP pour un projet immobilier de prestige. Pouvez-vous me contacter ?";
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Add WhatsApp VIP floating button
+        document.addEventListener('DOMContentLoaded', () => {
+            const whatsappBtn = document.createElement('div');
+            whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+            whatsappBtn.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 70px;
+                height: 70px;
+                background: linear-gradient(135deg, #25D366, #128C7E);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.75rem;
+                cursor: pointer;
+                box-shadow: var(--shadow-luxury);
+                z-index: 1000;
+                transition: var(--transition);
+                animation: pulse 2s infinite;
+            `;
+            
+            whatsappBtn.addEventListener('click', openWhatsAppVIP);
+            whatsappBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.15)';
+            });
+            whatsappBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+            
+            document.body.appendChild(whatsappBtn);
+        });
+
+        // Luxury loading screen
+        window.addEventListener('load', () => {
+            const loader = document.createElement('div');
+            loader.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-primary); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div style="font-size: 3.5rem; margin-bottom: 2rem; background: var(--bg-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-family: 'Playfair Display', serif;">Immo Ibtissam</div>
+                    <div style="width: 70px; height: 70px; border: 4px solid rgba(184, 134, 11, 0.3); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                    <div style="margin-top: 2rem; color: var(--text-muted); font-size: 1.1rem;">Chargement de l'excellence immobilière...</div>
+                    <div style="margin-top: 0.5rem; color: var(--primary); font-size: 0.95rem;">🏰 Immobilier de Prestige • Marrakech</div>
+                </div>
+            `;
+            
+            document.body.appendChild(loader);
+            
+            const spinStyle = document.createElement('style');
+            spinStyle.textContent = `
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                @keyframes slideInRight {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(spinStyle);
+            
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.6s ease';
+                setTimeout(() => {
+                    document.body.removeChild(loader);
+                }, 600);
+            }, 2500);
+        });
+
+        // Console luxury branding
+        console.log('%c🏰 Immo Ibtissam', 'color: #b8860b; font-size: 28px; font-weight: bold; font-family: serif;');
+        console.log('%c🏠 Immobilier de Prestige à Marrakech', 'color: #d4af37; font-size: 18px;');
+        console.log('%c📧 Contact VIP: ibtissam@immoprestige.ma', 'color: #8b4513; font-size: 16px;');
+        console.log('%c👑 Votre experte en propriétés d\'exception depuis 15 ans', 'color: #cd7f32; font-size: 14px;');
+        
+        // Easter egg for luxury clients
+        console.log('%cVous cherchez une propriété d\'exception ? 🏆', 'color: #2c3e50; font-size: 12px;');
+        console.log('%cMentionnez "CONSOLE_VIP" pour un service prioritaire !', 'color: #2c3e50; font-size: 12px;');
+    </script>
+</body>
+</html>

@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Elite | Développeur Full-Stack & Expert IA 🚀</title>
+    
+    <!-- SEO & Meta -->
+    <meta name="description" content="Portfolio professionnel - Développeur Full-Stack spécialisé en IA, créateur d'expériences numériques exceptionnelles et expert en solutions web innovantes">
+    <meta name="keywords" content="développeur full-stack, IA, intelligence artificielle, portfolio, SEO, React, Node.js, Marrakech">
+    <meta name="author" content="Elite Developer">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio Elite - Développeur Full-Stack & Expert IA">
+    <meta property="og:description" content="Créateur d'expériences numériques exceptionnelles, spécialisé en IA et développement web">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Three.js for 3D Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <style>
+        :root {
+            /* Elite Color Palette */
+            --primary: #ff0844;
+            --primary-light: #ff2d66;
+            --primary-dark: #e6073d;
+            --secondary: #00d9ff;
+            --accent: #7c3aed;
+            --accent-light: #a855f7;
+            --success: #39d353;
+            --warning: #ffb800;
+            --gold: #d4af37;
+            --electric-blue: #58a6ff;
+            --electric-blue-light: #79c0ff;
+            
+            /* Morocco Inspired Premium */
+            --morocco-gold: #d4af37;
+            --morocco-red: #dc2626;
+            --morocco-emerald: #059669;
+            
+            /* Professional Backgrounds */
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #151521;
+            --bg-tertiary: #1e1e2e;
+            --bg-glass: rgba(255, 255, 255, 0.02);
+            --bg-glass-hover: rgba(255, 255, 255, 0.05);
+            --darker-bg: #090c10;
+            
+            /* Typography Hierarchy */
+            --text-primary: #ffffff;
+            --text-secondary: #e4e4e7;
+            --text-muted: #a1a1aa;
+            --text-dim: #71717a;
+            
+            /* Premium Effects */
+            --border-primary: rgba(255, 8, 68, 0.2);
+            --border-secondary: rgba(0, 217, 255, 0.15);
+            --border-muted: rgba(255, 255, 255, 0.08);
+            
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 40px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.5);
+            --shadow-colored: 0 20px 60px rgba(255, 8, 68, 0.3);
+            --shadow-glow: 0 0 40px rgba(255, 8, 68, 0.4);
+            
+            --gradient-primary: linear-gradient(135deg, #ff0844 0%, #00d9ff 50%, #7c3aed 100%);
+            --gradient-morocco: linear-gradient(135deg, #dc2626 0%, #d4af37 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            --gradient-shine: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        }
+
+        /* Advanced Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Advanced Background Animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 8, 68, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 217, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+            z-index: -1;
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Floating Orbs */
+        .floating-orb {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--electric-blue-light), transparent);
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Premium Typography */
+        .font-primary { font-family: 'Space Grotesk', sans-serif; }
+        .font-secondary { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .text-display { 
+            font-size: clamp(2.5rem, 8vw, 6rem); 
+            line-height: 0.9; 
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% 400%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .text-hero { font-size: clamp(1.5rem, 5vw, 3rem); }
+        .text-title { font-size: clamp(1.8rem, 4vw, 3rem); }
+
+        /* Glitch Effect */
+        .glitch-effect {
+            position: relative;
+            animation: glitch 4s infinite;
+        }
+
+        .glitch-effect::before,
+        .glitch-effect::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .glitch-effect::before {
+            color: var(--electric-blue);
+            animation: glitchEffect 3s infinite;
+        }
+
+        .glitch-effect::after {
+            color: var(--success);
+            animation: glitchEffect 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            10% { transform: translate(-2px, -2px); }
+            20% { transform: translate(2px, 2px); }
+            30% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+        }
+
+        @keyframes glitchEffect {
+            0% { transform: translate(0); opacity: 0; }
+            20% { transform: translate(-2px, 2px); opacity: 0.3; }
+            40% { transform: translate(-2px, -2px); opacity: 0; }
+            60% { transform: translate(2px, 2px); opacity: 0.3; }
+            80% { transform: translate(2px, -2px); opacity: 0; }
+            100% { transform: translate(0); opacity: 0; }
+        }
+
+        /* Advanced Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 15, 0.8);
+            border-bottom: 1px solid var(--border-muted);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.95);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section - Premium */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 1rem 4rem;
+            position: relative;
+        }
+
+        .hero-bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(88, 166, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(57, 211, 83, 0.1) 0%, transparent 50%);
+            animation: bgPulse 8s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-colored);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-shine);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--border-primary);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn-secondary:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary:hover {
+            border-color: transparent;
+            transform: translateY(-3px);
+        }
+
+        /* Code Terminal - Ultra Premium */
+        .terminal {
+            background: var(--bg-tertiary);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .terminal-header {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-content {
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .code-comment { color: #6b7280; }
+        .code-keyword { color: #8b5cf6; }
+        .code-string { color: #10b981; }
+        .code-function { color: #3b82f6; }
+        .code-variable { color: #f59e0b; }
+
+        .typing-cursor {
+            opacity: 1;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-glass);
+            border-radius: 15px;
+            border: 1px solid var(--border-muted);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: var(--bg-glass-hover);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Projects Grid - Elite Level */
+        .projects {
+            padding: 6rem 1rem;
+            background: var(--bg-secondary);
+        }
+
+        .projects-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-muted);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* EFFET DE REFLET SUR HOVER - CELUI QUI MANQUAIT ! */
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+            z-index: 1;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: var(--bg-glass-hover);
+            box-shadow: 0 25px 60px rgba(88, 166, 255, 0.3);
+            border-color: var(--border-primary);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-icon {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tag {
+            background: rgba(255, 8, 68, 0.1);
+            color: var(--primary-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 8, 68, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: rgba(255, 8, 68, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .project-link:hover {
+            color: var(--primary-light);
+            background: rgba(255, 8, 68, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Skills Section - Professional */
+        .skills {
+            padding: 6rem 1rem;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-3d {
+            height: 300px;
+            margin: 2rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-muted);
+            background: var(--bg-glass);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-muted);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-shine);
+            transition: left 0.6s ease;
+        }
+
+        .skill-category:hover::before {
+            left: 100%;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            background: var(--bg-glass-hover);
+            border-color: var(--border-primary);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Progress Bars */
+        .progress-container {
+            margin: 1rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+            transition: width 1s ease;
+            width: 0%;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 1rem;
+            background: var(--bg-secondary);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .avatar {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            margin: 0 auto;
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .avatar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-shine);
+            transition: left 0.6s ease;
+        }
+
+        .avatar:hover::before {
+            left: 100%;
+        }
+
+        .about-content h3 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 1rem;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-muted);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-shine);
+            transition: left 0.6s ease;
+        }
+
+        .contact-link:hover::before {
+            left: 100%;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-light);
+            background: var(--bg-glass-hover);
+            transform: translateY(-5px);
+            border-color: var(--border-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-tertiary);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-top: 1px solid var(--border-muted);
+        }
+
+        /* Particles Animation */
+        .floating-particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--electric-blue);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: floatUp 10s linear infinite;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0.3;
+            }
+            to {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1rem 2rem;
+            }
+
+            .hero-container {
+                gap: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .avatar {
+                width: 200px;
+                height: 200px;
+                font-size: 4rem;
+            }
+
+            .terminal {
+                margin: 0 1rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                text-align: left;
+            }
+
+            .hero-subtitle {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .cta-buttons {
+                justify-content: flex-start;
+            }
+
+            .stats {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr 2fr;
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-links {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Orbs -->
+    <div class="floating-orb" style="top: 20%; left: 10%; width: 100px; height: 100px; animation-delay: 0s;"></div>
+    <div class="floating-orb" style="top: 60%; right: 15%; width: 150px; height: 150px; animation-delay: 2s;"></div>
+    <div class="floating-orb" style="bottom: 20%; left: 20%; width: 80px; height: 80px; animation-delay: 4s;"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo font-mono">{'<ThibautDev/>'}</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-animation"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="text-display animate-fade-in-up">
+                    <span class="glitch-effect" data-text="Elite">Elite</span><br>
+                    <span style="background: var(--gradient-morocco); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Developer</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.2s;">
+                    Développeur Full-Stack & Expert IA spécialisé en solutions digitales innovantes. 
+                    Créateur d'expériences numériques exceptionnelles qui transforment les entreprises.
+                </p>
+                <div class="cta-buttons animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <a href="#projects" class="btn-primary">Découvrir mes Projets</a>
+                    <a href="#contact" class="btn-secondary">Collaborons Ensemble</a>
+                </div>
+                
+                <div class="stats animate-fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="7">0</div>
+                        <div class="stat-label">Années d'Expérience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terminal animate-fade-in-up" style="animation-delay: 0.8s;">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                    <span style="margin-left: 1rem; color: var(--text-muted); font-size: 0.9rem;">elite_portfolio.js</span>
+                </div>
+                <div class="terminal-content">
+                    <div><span class="code-comment">// Thibaut Campana - Marrakech, Morocco 🇲🇦</span></div>
+                    <div><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">name</span>: <span class="code-string">'Thibaut Campana'</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">location</span>: <span class="code-string">'Marrakech, Morocco'</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">specialties</span>: [</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'AI & Machine Learning'</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Full-Stack Development'</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'SEO & Digital Marketing'</span></div>
+                    <div>&nbsp;&nbsp;],</div>
+                    <div>&nbsp;&nbsp;<span class="code-variable">mission</span>: <span class="code-string">'Transform ideas into digital success'</span></div>
+                    <div>};</div>
+                    <br>
+                    <div><span class="code-keyword">function</span> <span class="code-function">createMagic</span>(<span class="code-variable">idea</span>) {</div>
+                    <div>&nbsp;&nbsp;<span class="code-keyword">return</span> developer.<span class="code-function">build</span>(<span class="code-variable">idea</span>) + <span class="code-string">' ✨'</span>;</div>
+                    <div>}</div>
+                    <br>
+                    <div id="typing-line"><span class="code-comment">// Ready for your next project!</span><span class="typing-cursor">_</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects-container">
+            <div class="section-title">
+                <h2>Mes Réalisations Elite</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Découvrez mes projets les plus aboutis, alliant innovation technologique et excellence en design
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- IA Insights Hub -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">IA Insights Hub</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Plateforme d'actualités IA</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Hub professionnel francophone dédié à l'intelligence artificielle. Actualités, tutoriels et ressources 
+                        de qualité pour les professionnels de l'IA avec interface moderne et contenu dynamique.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5/CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">AI Content</span>
+                        <span class="tag">SEO Optimisé</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../AiNews/ia_insights_francais.html" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le Projet</span>
+                        </a>
+                        <a href="https://github.com/Suprjack?tab=repositories" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SEO Marrakech -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: var(--gradient-morocco);">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">SEO Marrakech Pro</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Agence SEO Professionnelle</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Agence de référencement professionnel à Marrakech. Services complets d'optimisation SEO 
+                        avec résultats mesurables, dashboard client et stratégie de contenu avancée.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">SEO Technique</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Marketing Digital</span>
+                        <span class="tag">Marrakech</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../SEOMarrakech/index.html" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le Projet</span>
+                        </a>
+                        <a href="https://github.com/Suprjack?tab=repositories" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GolfinThai Elite -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                            <i class="fas fa-golf-ball"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">GolfinThai Elite</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Expériences Golf Premium</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Plateforme de voyages golfiques premium en Thaïlande. Expériences sur mesure avec parcours 
+                        d'exception, service personnalisé et galeries photos immersives.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">SEO Multilingue</span>
+                        <span class="tag">Premium UX</span>
+                        <span class="tag">Travel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../GolfinThaiTopVersio/index.html" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le Projet</span>
+                        </a>
+                        <a href="https://github.com/Suprjack?tab=repositories" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Teepana DJ -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">Teepana DJ</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Brand Artistique</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Site professionnel pour DJ/Producteur basé à Marrakech. Identité visuelle forte, 
+                        intégration musicale avancée et système de booking en ligne.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Audio Integration</span>
+                        <span class="tag">Brand Identity</span>
+                        <span class="tag">Animation CSS</span>
+                        <span class="tag">Music</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../../TeepanaDJ/index.html" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le Projet</span>
+                        </a>
+                        <a href="https://github.com/Suprjack?tab=repositories" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NeuroCore -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-chip"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">NeuroCore AI</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Plateforme IA Avancée</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Plateforme d'intelligence artificielle avancée pour le traitement de données neurales 
+                        avec interfaces utilisateur intuitives et visualisations de données complexes.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">React/Node.js</span>
+                        <span class="tag">Data Viz</span>
+                        <span class="tag">Neural Networks</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../../NeuroCoreBest/NeuroCore.html" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le Projet</span>
+                        </a>
+                        <a href="https://github.com/Suprjack?tab=repositories" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Siam Insider -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <h3 class="project-title">Siam Insider</h3>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Magazine Digital</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Magazine digital premium sur la Thaïlande avec contenu éditorial riche, 
+                        calendrier éditorial structuré et stratégie de contenu optimisée pour l'engagement.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Content Management</span>
+                        <span class="tag">Editorial Design</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">Publishing</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../Siam Insider/Mockup3.html" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Voir le Projet</span>
+                        </a>
+                        <a href="https://github.com/Suprjack?tab=repositories" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code Source</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <div class="section-title">
+                <h2>Expertise Technique Elite</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Maîtrise complète des technologies modernes et émergentes
+                </p>
+            </div>
+            
+            <div class="skills-3d" id="skills-3d"></div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Intelligence Artificielle</h3>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Machine Learning</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Deep Learning</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Développement Full-Stack</h3>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>React/Next.js</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" data-width="98"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Node.js</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">SEO & Marketing Digital</h3>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>SEO Technique</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" data-width="96"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Analytics</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="tag">Google Analytics</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">Performance Marketing</span>
+                        <span class="tag">Conversion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="avatar">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <h3>Elite Developer & Digital Entrepreneur</h3>
+                <div class="about-text">
+                    <p style="margin-bottom: 1.5rem;">
+                        Basé à <strong style="color: var(--gold);">Marrakech, Maroc</strong> 🇲🇦, je suis un développeur full-stack passionné 
+                        par l'innovation technologique et l'entrepreneuriat digital. Avec plus de 7 années d'expérience, 
+                        je me spécialise dans la création de solutions web complexes et l'intégration d'intelligence artificielle.
+                    </p>
+                    
+                    <p style="margin-bottom: 1.5rem;">
+                        Mon parcours m'a mené à créer des plateformes IA avancées, des agences digitales prospères, 
+                        et des expériences utilisateur exceptionnelles. Je transforme les idées ambitieuses en produits 
+                        numériques qui génèrent des résultats mesurables et durables.
+                    </p>
+                    
+                    <p style="margin-bottom: 2rem;">
+                        <strong style="color: var(--primary-light);">Ma mission :</strong> Démocratiser l'accès aux technologies avancées 
+                        et aider les entreprises à prospérer dans l'ère numérique grâce à des solutions sur-mesure et innovantes.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: var(--text-primary); margin-bottom: 1rem;">Domaines d'Excellence</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="tag">Intelligence Artificielle</span>
+                        <span class="tag">Développement Full-Stack</span>
+                        <span class="tag">Architecture Cloud</span>
+                        <span class="tag">SEO & Marketing</span>
+                        <span class="tag">Innovation Produit</span>
+                        <span class="tag">Entrepreneuriat Digital</span>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn-primary">
+                    Collaborons Ensemble
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-title">
+                <h2>Créons Ensemble Votre Projet</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Prêt à transformer votre vision en réalité digitale ? Discutons de votre prochain projet révolutionnaire.
+                </p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:thibautcampana@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>thibautcampana@gmail.com</span>
+                </a>
+                
+                <a href="https://wa.me/212630728089" class="contact-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                
+                <a href="https://www.instagram.com/marrakechsoundlab/" class="contact-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://github.com/Suprjack?tab=repositories" class="contact-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <div class="logo font-mono" style="margin-bottom: 0.5rem;">{'<ThibautDev/>'}</div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Crafted with ❤️ in Marrakech, Morocco 🇲🇦</p>
+            </div>
+            
+            <div style="display: flex; gap: 1rem;">
+                <a href="https://github.com/Suprjack?tab=repositories" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease;" 
+                   onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-muted)'" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/marrakechsoundlab/" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease;" 
+                   onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-muted)'" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/212630728089" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease;" 
+                   onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-muted)'" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-muted);">
+            <p style="color: var(--text-muted); font-size: 0.8rem;">
+                © 2025 Thibaut Campana. Tous droits réservés. | Développeur Full-Stack & Expert IA basé à Marrakech
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    
+                    // Animate progress bars
+                    const progressBars = entry.target.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = width + '%';
+                        }, 500);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.project-card, .skill-category, .stat-item');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Stats counter animation
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        }
+
+        // Start counter animation when stats are visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        animateCounter(counter, target);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.querySelector('.stats');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+        });
+
+        // Terminal typing effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingElement = document.getElementById('typing-line');
+            const messages = [
+                "// Initializing Elite Portfolio...",
+                "// Loading awesome projects...",
+                "// Ready for your next project!",
+                "// Let's create something amazing! ✨"
+            ];
+            
+            let messageIndex = 0;
+            let charIndex = 0;
+            
+            function typeMessage() {
+                if (messageIndex < messages.length) {
+                    if (charIndex < messages[messageIndex].length) {
+                        typingElement.innerHTML = messages[messageIndex].substring(0, charIndex + 1) + '<span class="typing-cursor">_</span>';
+                        charIndex++;
+                        setTimeout(typeMessage, 50);
+                    } else {
+                        setTimeout(() => {
+                            messageIndex++;
+                            charIndex = 0;
+                            if (messageIndex < messages.length) {
+                                typeMessage();
+                            }
+                        }, 2000);
+                    }
+                }
+            }
+            
+            setTimeout(typeMessage, 1000);
+        });
+
+        // 3D Skills Visualization
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('skills-3d');
+            if (!container || !window.THREE) return;
+            
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Skills data with colors
+            const skills = [
+                { name: "React", color: 0x61dafb },
+                { name: "TypeScript", color: 0x007acc },
+                { name: "Node.js", color: 0x8cc84b },
+                { name: "Python", color: 0xffd43b },
+                { name: "AI/ML", color: 0x8b5cf6 },
+                { name: "MongoDB", color: 0x13aa52 },
+                { name: "GraphQL", color: 0xe535ab },
+                { name: "AWS", color: 0xff9900 }
+            ];
+            
+            const particles = [];
+            const particleGeometry = new THREE.SphereGeometry(0.3, 16, 16);
+            
+            skills.forEach((skill, index) => {
+                const particleMaterial = new THREE.MeshBasicMaterial({ 
+                    color: skill.color,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                const particle = new THREE.Mesh(particleGeometry, particleMaterial);
+                
+                // Position on sphere
+                const phi = Math.acos(-1 + (2 * index) / skills.length);
+                const theta = Math.sqrt(skills.length * Math.PI) * phi;
+                
+                particle.position.x = 3 * Math.cos(theta) * Math.sin(phi);
+                particle.position.y = 3 * Math.sin(theta) * Math.sin(phi);
+                particle.position.z = 3 * Math.cos(phi);
+                
+                particles.push(particle);
+                scene.add(particle);
+            });
+            
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            scene.add(ambientLight);
+            
+            const pointLight = new THREE.PointLight(0xff0844, 1, 100);
+            pointLight.position.set(0, 0, 10);
+            scene.add(pointLight);
+            
+            camera.position.z = 8;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                const time = Date.now() * 0.001;
+                
+                particles.forEach((particle, index) => {
+                    const radius = 3;
+                    particle.position.x = radius * Math.cos(time + index * 0.5) * Math.sin(time * 0.5 + index * 0.3);
+                    particle.position.y = radius * Math.sin(time + index * 0.5) * Math.sin(time * 0.5 + index * 0.3);
+                    particle.position.z = radius * Math.cos(time * 0.5 + index * 0.3);
+                    
+                    particle.rotation.x += 0.01;
+                    particle.rotation.y += 0.02;
+                });
+                
+                scene.rotation.y += 0.005;
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+            
+            // Handle resize
+            window.addEventListener('resize', () => {
+                if (container.clientWidth > 0) {
+                    camera.aspect = container.clientWidth / container.clientHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(container.clientWidth, container.clientHeight);
+                }
+            });
+        });
+
+        // Floating particles
+        function createFloatingParticles() {
+            const heroSection = document.getElementById('home');
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'floating-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (5 + Math.random() * 10) + 's';
+                
+                heroSection.appendChild(particle);
+            }
+        }
+
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'var(--bg-secondary)';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.padding = '1rem';
+                navLinks.style.borderTop = '1px solid var(--border-muted)';
+            });
+        }
+
+        // Initialize particles
+        setTimeout(createFloatingParticles, 1000);
+
+        // Professional console messages
+        console.log('%c🚀 Elite Developer Portfolio', 'color: #ff0844; font-size: 24px; font-weight: bold;');
+        console.log('%c💼 Développeur Full-Stack & Expert IA basé à Marrakech', 'color: #00d9ff; font-size: 16px;');
+        console.log('%c📧 Contact: thibautcampana@gmail.com', 'color: #7c3aed; font-size: 14px;');
+        console.log('%c🔥 Intéressé par une collaboration? Contactez-moi!', 'color: #39d353; font-size: 14px;');
+        
+        // Easter egg
+        window.showSecretSkills = function() {
+            console.log('%c🎉 Easter Egg Discovered!', 'color: #d4af37; font-size: 20px; font-weight: bold;');
+            console.log('%c🇲🇦 Made with Moroccan passion in Marrakech!', 'color: #dc2626; font-size: 16px;');
+            document.body.style.filter = 'hue-rotate(180deg)';
+            setTimeout(() => {
+                document.body.style.filter = 'none';
+            }, 3000);
+        };
+    </script>
+</body>
+</html>

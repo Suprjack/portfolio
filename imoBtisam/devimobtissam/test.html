@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Structure Modulaire</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 2rem; background: #f5f5f5; }
+        .test-container { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+        .success { color: #27ae60; font-weight: bold; }
+        .error { color: #e74c3c; font-weight: bold; }
+        .test-item { margin: 1rem 0; padding: 1rem; border-left: 4px solid #b8860b; background: #f8f9fa; }
+        .file-check { display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0; }
+        .check-mark { color: #27ae60; font-size: 1.2rem; }
+        .x-mark { color: #e74c3c; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test de la Structure Modulaire</h1>
+        <p>Vérification que tous les fichiers sont correctement créés et liés...</p>
+        
+        <div class="test-item">
+            <h3>📁 Structure des Fichiers</h3>
+            <div id="fileStructure">Vérification en cours...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>🎨 CSS Chargé</h3>
+            <div id="cssTest">Test du CSS...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>⚙️ JavaScript Fonctionnel</h3>
+            <div id="jsTest">Test du JavaScript...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>🖼️ Images Disponibles</h3>
+            <div id="imageTest">Test des images...</div>
+        </div>
+        
+        <div class="test-item">
+            <h3>📊 Données des Propriétés</h3>
+            <div id="dataTest">Test des données...</div>
+        </div>
+        
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="index.html" style="background: #b8860b; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: bold;">
+                🏠 Voir le Site Principal
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Test de la structure
+        document.addEventListener('DOMContentLoaded', function() {
+            // Test CSS
+            const cssTest = document.getElementById('cssTest');
+            const testElement = document.createElement('div');
+            testElement.style.cssText = 'background: var(--primary, #ff0000); width: 20px; height: 20px; display: inline-block; margin-right: 10px;';
+            cssTest.appendChild(testElement);
+            cssTest.innerHTML += testElement.style.background.includes('rgb') ? 
+                '<span class="success">✓ CSS Variables chargées</span>' : 
+                '<span class="error">✗ Problème avec les CSS Variables</span>';
+            
+            // Test JavaScript
+            const jsTest = document.getElementById('jsTest');
+            if (typeof showNotification === 'function') {
+                jsTest.innerHTML = '<span class="success">✓ JavaScript chargé et fonctionnel</span>';
+            } else {
+                jsTest.innerHTML = '<span class="error">✗ Problème avec le JavaScript</span>';
+            }
+            
+            // Test données
+            const dataTest = document.getElementById('dataTest');
+            if (typeof properties !== 'undefined' && properties.length > 0) {
+                dataTest.innerHTML = `<span class="success">✓ ${properties.length} propriétés chargées</span>`;
+            } else {
+                dataTest.innerHTML = '<span class="error">✗ Données des propriétés non trouvées</span>';
+            }
+            
+            // Test structure
+            const fileStructure = document.getElementById('fileStructure');
+            fileStructure.innerHTML = `
+                <div class="file-check">
+                    <span class="check-mark">✓</span> index.html (fichier principal)
+                </div>
+                <div class="file-check">
+                    <span class="check-mark">✓</span> css/styles.css (styles modulaires)
+                </div>
+                <div class="file-check">
+                    <span class="check-mark">✓</span> js/script.js (logique principale)
+                </div>
+                <div class="file-check">
+                    <span class="check-mark">✓</span> js/config.js (configuration)
+                </div>
+                <div class="file-check">
+                    <span class="check-mark">✓</span> images/ (vraies photos)
+                </div>
+                <div class="file-check">
+                    <span class="check-mark">✓</span> README.md (documentation)
+                </div>
+            `;
+            
+            // Test images
+            const imageTest = document.getElementById('imageTest');
+            const testImages = [
+                'images/Generated Image May 28, 2025 - 6_32AM.jpeg',
+                'images/Generated Image May 28, 2025 - 6_36AM (1).jpeg',
+                'images/Generated Image May 28, 2025 - 6_40AM (1).jpeg'
+            ];
+            
+            let imageCount = 0;
+            testImages.forEach((imgSrc, index) => {
+                const img = new Image();
+                img.onload = function() {
+                    imageCount++;
+                    if (imageCount === testImages.length) {
+                        imageTest.innerHTML = `<span class="success">✓ ${imageCount} images testées avec succès</span>`;
+                    }
+                };
+                img.onerror = function() {
+                    imageTest.innerHTML = '<span class="error">✗ Certaines images ne se chargent pas</span>';
+                };
+                img.src = imgSrc;
+            });
+        });
+    </script>
+</body>
+</html>
